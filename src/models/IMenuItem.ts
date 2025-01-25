@@ -1,8 +1,11 @@
+import { Category } from "./Categories";
+
 export interface IMenuItem {
   name: string;
   imageUrl: string;
-  description: string;
+  description?: string;
   price: number;
-  category: string;
-  subCategory: string;
+  categories?: Category[];
+  isFavorite?: boolean;
+  isActive?: boolean;
 }

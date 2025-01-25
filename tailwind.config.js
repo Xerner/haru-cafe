@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'sims': 'url("/images/haru-cafe-sims.jfif")'
-      }
+      },
+      fontFamily: {
+        'font-comic-sans': ['Comic Sans MS', 'cursive'],
+      },
     },
   },
   plugins: [],

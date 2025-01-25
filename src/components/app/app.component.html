@@ -1,21 +1,21 @@
-<div class="bg-gray-900 text-white">
-	<haru-navbar></haru-navbar>
+<haru-navbar></haru-navbar>
+<!-- header -->
+<div class="bg-sims bg-center bg-cover">
+  <div class="mx-auto py-20 min-w-96 max-w-4xl">
+    <img
+      src="images/haru-cafe-header-text.png"
+      alt="haru-cafe-header-text" />
+  </div>
+</div>
 
-	<!-- header -->
-	<div class="bg-sims bg-center bg-cover">
-		<div class="mx-auto py-20 min-w-96 max-w-4xl">
-			<img
-				src="images/haru-cafe-header-text.png"
-				alt="haru-cafe-header-text" />
-		</div>
-	</div>
-
-	<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-blue-200 text-2xl">
+<div class="bg-gray-900 font-comic-sans text-blue-200 px-20">
+  <!-- more header -->
+	<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
 		<div class="flex flex-col justify-center">
 			<div>
 				<img
-          imageDialog="Hello We Are Haru Cafe"
-					class="h-96 mx-auto"
+					imageDialog="Hello We Are Haru Cafe"
+					class="h-96 mx-auto rounded"
 					src="images/hello-we-are-haru-cafe.png"
 					alt="hello-we-are-haru-cafe" />
 			</div>
@@ -23,29 +23,81 @@
 			<div class="text-center mt-4">We Are Open!</div>
 		</div>
 		<div class="flex flex-col justify-center">
-      <div>
-        <img
-          imageDialog="Menu Billboard"
-          class="h-96 mx-auto"
-          src="images/haru-cafe-menu-billboard.png"
-          alt="haru-cafe-menu-billboard" />
-      </div>
+			<div>
+				<img
+					imageDialog="Menu Billboard"
+					class="h-96 mx-auto rounded"
+					src="images/haru-cafe-menu-billboard.png"
+					alt="haru-cafe-menu-billboard" />
+			</div>
 			<div class="text-center mt-4">Taste that goes beyond your imagination!</div>
 		</div>
 	</div>
 
-  <!-- menu -->
+	<!-- menu -->
+	<haru-h1>Our Menu</haru-h1>
 	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-    <img imageDialog="Menu Page 1" src="images/menu/1.png" alt="menu-page-1"/>
-    <img imageDialog="Menu Page 2" src="images/menu/2.png" alt="menu-page-2"/>
-    <img imageDialog="Menu Page 3" src="images/menu/3.png" alt="menu-page-3"/>
-    <img imageDialog="Menu Page 4" src="images/menu/4.png" alt="menu-page-4"/>
-  </div>
+		<img
+			imageDialog="Menu Page 1"
+			class="rounded"
+			src="images/menu/1.png"
+			alt="menu-page-1" />
+		<img
+			imageDialog="Menu Page 2"
+			class="rounded"
+			src="images/menu/2.png"
+			alt="menu-page-2" />
+		<img
+			imageDialog="Menu Page 3"
+			class="rounded"
+			src="images/menu/3.png"
+			alt="menu-page-3" />
+		<img
+			imageDialog="Menu Page 4"
+			class="rounded"
+			src="images/menu/4.png"
+			alt="menu-page-4" />
+	</div>
 
-  <!-- menu items -->
-  <div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-    @for (menuItem of menuItemsService.menuItems(); track $index) {
-      <haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-    }
-  </div>
+	<!-- juices -->
+	<haru-h1>Juices</haru-h1>
+	<haru-h2>Single Flavor</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Drink, Category.SingleFlavor); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
+  <haru-h2>Mixed Flavor</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Drink, Category.MixedFlavor); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
+  
+  <!-- food -->
+	<haru-h1>Food</haru-h1>
+	<haru-h2>Sandwiches</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Sandwich); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
+  <haru-h2>Mini Pizzas</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.MiniPizza); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
+  <haru-h2>Bakery</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Bakery); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
+  <haru-h2>Snacks</haru-h2>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Snack); track $index) {
+		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
 </div>
