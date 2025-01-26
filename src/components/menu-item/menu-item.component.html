@@ -1,14 +1,10 @@
-<div class="min-w-52 max-w-4xl mx-auto rounded-lg bg-gray-100 text-black">
-  <img class="rounded-t-lg mb-2" [imageDialog]="menuItem().name" [src]="menuItem().imageUrl" [alt]="menuItem().name" />
-  <div class="p-4">
-    <h1 class="text-2xl font-bold">{{ menuItem().name }}</h1>
-    <p class="text-lg">{{ menuItem().description }}</p>
-    <p class="text-lg font-bold">{{ menuItem().price | currency }}</p>
-    <!-- <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      (click)="addToCart(menuItem())"
-    >
-      Add to Cart
-    </button> -->
+<div class="xl:h-[9em] h-[6em] grid grid-cols-3 w-full h-full justify-between bg-cyan-100 text-black rounded-lg overflow-hidden">
+  <div class="p-4 col-span-2 flex flex-col justify-between">
+    <div>
+      <h1 class="font-bold">{{ menuItem().name }}</h1>
+      <p class="font-light xl:block hidden">{{ menuItem().description }}</p>
+    </div>
+    <p class="text font-medium">{{ menuItem().price | currency }}</p>
   </div>
+  <img class="object-cover h-full bg-teal-100 border-l-2 border-teal-200 rounded-lg overflow-hidden" [src]="menuItem().imageUrl" [alt]="menuItem().name" />
 </div>

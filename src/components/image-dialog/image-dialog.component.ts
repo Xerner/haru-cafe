@@ -2,7 +2,6 @@ import { DIALOG_DATA } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
 
 export interface IImageDialogData {
-  name: string;
   src: string;
   alt: string;
 }

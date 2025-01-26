@@ -1,7 +1,7 @@
 export enum Category {
-  Juice = "Fresh Juice",
   Drink = "Drink",
   Food = "Food",
+  Juice = "Fresh Juice",
   SingleFlavor = "Single Flavor",
   MixedFlavor = "Mixed Flavor",
   Sandwich = "Sandwich",
@@ -9,11 +9,16 @@ export enum Category {
   Bakery = "Bakery",
   Snack = "Snack",
   Coffee = "Coffee",
-  HotCoffee = "Hot Coffee",
-  IcedCoffee = "Iced Coffee",
-  HotNonCoffee = "Hot Non-Coffee",
-  IcedNonCoffee = "Iced Non-Coffee",
+  NonCoffee = "Non-Coffee",
+  Hot = "Hot",
+  Iced = "Iced",
   Ade = "Ade",
   Seasonal = "Seasonal",
-  HotTea = "Hot Tea",
+  Tea = "Tea",
 }
+
+export const MutuallyExclusiveCategories: Category[][] = [
+  // [Category.Food, Category.Drink],
+  // [Category.Coffee, Category.NonCoffee],
+  // [Category.Hot, Category.Iced],
+];

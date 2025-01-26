@@ -8,8 +8,8 @@
   </div>
 </div>
 
-<div class="bg-gray-900 font-comic-sans text-blue-200 px-20">
-  <!-- more header -->
+<div class="bg-cyan-50 font-comic-sans px-20">
+	<!-- more header -->
 	<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
 		<div class="flex flex-col justify-center">
 			<div>
@@ -35,69 +35,40 @@
 	</div>
 
 	<!-- menu -->
-	<haru-h1>Our Menu</haru-h1>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+	<haru-h1>Menu</haru-h1>
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-4 gap-4">
 		<img
-			imageDialog="Menu Page 1"
-			class="rounded"
+			imageDialog
+			class="rounded border border-slate-300"
 			src="images/menu/1.png"
 			alt="menu-page-1" />
 		<img
-			imageDialog="Menu Page 2"
-			class="rounded"
+			imageDialog
+			class="rounded border border-slate-300"
 			src="images/menu/2.png"
 			alt="menu-page-2" />
 		<img
-			imageDialog="Menu Page 3"
-			class="rounded"
+			imageDialog
+			class="rounded border border-slate-300"
 			src="images/menu/3.png"
 			alt="menu-page-3" />
 		<img
-			imageDialog="Menu Page 4"
-			class="rounded"
+			imageDialog
+			class="rounded border border-slate-300"
 			src="images/menu/4.png"
 			alt="menu-page-4" />
 	</div>
 
-	<!-- juices -->
-	<haru-h1>Juices</haru-h1>
-	<haru-h2>Single Flavor</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Drink, Category.SingleFlavor); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-  <haru-h2>Mixed Flavor</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Drink, Category.MixedFlavor); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-  
-  <!-- food -->
-	<haru-h1>Food</haru-h1>
-	<haru-h2>Sandwiches</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Sandwich); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-  <haru-h2>Mini Pizzas</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.MiniPizza); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-  <haru-h2>Bakery</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Bakery); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-  <haru-h2>Snacks</haru-h2>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.menuItemsByCategory(Category.Food, Category.Snack); track $index) {
-		<haru-menu-item [menuItem]="menuItem"></haru-menu-item>
+  <haru-h2 class="p-4">Search Our Menu</haru-h2>
+  <haru-filters></haru-filters>
+	<div class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
+		@for (menuItem of menuItemsService.filteredMenuItems();
+		track $index) {
+		<haru-menu-item
+			[imageDialog]="menuItem.imageUrl"
+			[menuItem]="menuItem"></haru-menu-item>
 		}
 	</div>
 </div>
+
+<haru-footer></haru-footer>

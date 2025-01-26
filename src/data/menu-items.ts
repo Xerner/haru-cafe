@@ -243,118 +243,238 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Americano",
     imageUrl: "images/menu-items/americano.jpg",
     price: 3.00,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "K - Coffee 10oz",
     imageUrl: "images/menu-items/k-coffee-10oz.jpg",
     price: 3.00,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "Vanilla Latte",
     imageUrl: "images/menu-items/vanilla-latte.jpg",
     price: 5.50,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "Caramel Latte",
     imageUrl: "images/menu-items/caramel-latte.jpg",
     price: 5.50,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "Sweet Milk Latte",
     imageUrl: "images/menu-items/sweet-milk-latte.jpg",
     price: 5.50,
-    categories: [Category.Food, Category.HotCoffee],  
+    categories: [Category.Drink, Category.Hot, Category.Coffee],  
   },
   {
     name: "Cloud Latte",
     imageUrl: "images/menu-items/cloud-latte.jpg",
     price: 5.50,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "Blue Ocean Latte",
     imageUrl: "images/menu-items/blue-ocean-latte.jpg",
     price: 6.00,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
   },
   {
     name: "Haru Signature Latte",
     imageUrl: "images/menu-items/haru-signature-latte.jpg",
     price: 6.00,
-    categories: [Category.Food, Category.HotCoffee],
+    categories: [Category.Drink, Category.Hot, Category.Coffee],
+    isFavorite: true,
+  },
+  //#endregion
+
+  //#region cold coffee
+  {
+    name: "Iced Americano",
+    imageUrl: "images/menu-items/iced-americano.jpg",
+    price: 3.50,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced K - Coffee 16oz",
+    imageUrl: "images/menu-items/iced-k-coffee-16oz.jpg",
+    price: 3.50,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced Vanilla Latte",
+    imageUrl: "images/menu-items/iced-vanilla-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced Caramel Latte",
+    imageUrl: "images/menu-items/iced-caramel-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced Sweet Milk Latte",
+    imageUrl: "images/menu-items/iced-sweet-milk-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],  
+  },
+  {
+    name: "Iced Cloud Latte",
+    imageUrl: "images/menu-items/iced-cloud-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced Blue Ocean Latte",
+    imageUrl: "images/menu-items/iced-blue-ocean-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
+  },
+  {
+    name: "Iced Haru Signature Latte",
+    imageUrl: "images/menu-items/iced-haru-signature-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Iced, Category.Coffee],
     isFavorite: true,
   },
   //#endregion
   
-  //
+  //#region hot non coffee
   {
-    name: "Chicken Tenders",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "Crispy chicken tenders served with your choice of dipping sauce.",
-    price: 7.99,
+    name: "Hot Matcha Latte",
+    imageUrl: "images/menu-items/matcha-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Hot, Category.NonCoffee],
   },
   {
-    name: "Caesar Salad",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A classic Caesar salad with romaine lettuce, croutons, and parmesan cheese.",
-    price: 5.99,
+    name: "Hot Yuja Matcha Latte",
+    imageUrl: "images/menu-items/yuja-matcha-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Hot, Category.NonCoffee],
+  },
+  //#endregion
+
+  //#region iced non coffee
+  {
+    name: "Peach Iced Tea",
+    imageUrl: "images/menu-items/icedmatcha-latte.jpg",
+    price: 4.50,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
   },
   {
-    name: "Chocolate Cake",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A rich, decadent chocolate cake topped with chocolate frosting.",
-    price: 4.99,
+    name: "Iced Choco Latte",
+    imageUrl: "images/menu-items/iced-matcha-latte.jpg",
+    price: 5.50,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
   },
   {
-    name: "Apple Pie",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A delicious apple pie with a flaky crust and cinnamon-spiced filling.",
-    price: 3.99,
+    name: "Iced Strawberry Latte",
+    imageUrl: "images/menu-items/iced-strawberry-latte.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
   },
   {
-    name: "Vanilla Ice Cream",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "Creamy vanilla ice cream served in a waffle cone.",
-    price: 2.99,
+    name: "Iced Blueberry Latte",
+    imageUrl: "images/menu-items/iced-blueberry-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
   },
   {
-    name: "Coca-Cola",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A refreshing Coca-Cola served over ice.",
-    price: 1.99,
+    name: "Iced Matcha Latte",
+    imageUrl: "images/menu-items/iced-matcha-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
   },
   {
-    name: "Iced Tea",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A cool glass of iced tea with a lemon wedge.",
-    price: 1.99,
+    name: "Iced Choco Strawberry Delight",
+    imageUrl: "images/menu-items/iced-choco-strawberry-delight.jpg",
+    price: 6.90,
+    categories: [Category.Drink, Category.Iced, Category.NonCoffee],
+  },
+  //#endregion
+
+  //#region ade
+  {
+    name: "Blood Lemonade",
+    imageUrl: "images/menu-items/blood-lemonade.jpg",
+    price: 5.00,
+    categories: [Category.Drink, Category.Iced, Category.Ade],
   },
   {
-    name: "Coffee",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A steaming cup of coffee with cream and sugar.",
-    price: 1.99,
+    name: "Aurora Lemonade",
+    imageUrl: "images/menu-items/aurora-lemonade.jpg",
+    price: 5.50,
+    categories: [Category.Drink, Category.Iced, Category.Ade],
+    isFavorite: true,
   },
   {
-    name: "Margarita",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A classic margarita with tequila, triple sec, and lime juice.",
-    price: 7.99,
+    name: "Twilight Blueberry-ade",
+    imageUrl: "images/menu-items/twilight-blueberry-ade.jpg",
+    price: 5.90,
+    categories: [Category.Drink, Category.Iced, Category.Ade],
   },
   {
-    name: "Mojito",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A refreshing mojito with rum, mint, lime, and soda water.",
-    price: 7.99,
+    name: "Berry Lemonade",
+    imageUrl: "images/menu-items/berry-lemonade.jpg",
+    price: 6.00,
+    categories: [Category.Drink, Category.Iced, Category.Ade],
+  },
+  //#endregion
+
+  //#region seasonal
+  {
+    name: "Iced Spring Latte",
+    imageUrl: "images/menu-items/iced-spring-latte.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Iced, Category.Seasonal, Category.Coffee],
   },
   {
-    name: "Mai Tai",
-    imageUrl: "images/menu-items/https://www.pngitem",
-    description: "A tropical mai tai with rum, orange curaçao, and lime juice.",
-    price: 7.99,
-  }
+    name: "Summer Red Sparkling what is this lol",
+    imageUrl: "images/menu-items/summer-red-sparkling.jpg",
+    price: 6.50,
+    categories: [Category.Drink, Category.Seasonal],
+  },
+  {
+    name: "Fall Pumpkin Spice Latte",
+    imageUrl: "images/menu-items/fall-pumpkin-spice-latte.jpg",
+    price: 5.50,
+    categories: [Category.Drink, Category.Hot, Category.Coffee, Category.Seasonal],
+  },
+  {
+    name: "Winter Hot Chocolate",
+    imageUrl: "images/menu-items/winter-hot-chocolate.jpg",
+    price: 4.50,
+    categories: [Category.Drink, Category.Hot, Category.NonCoffee, Category.Seasonal],
+  },
+  //#endregion
+
+  //#region hot tea
+  {
+    name: "Green Tea",
+    imageUrl: "images/menu-items/green-tea.jpg",
+    price: 3.50,
+    categories: [Category.Drink, Category.Hot, Category.Tea],
+  },
+  {
+    name: "Yuja Tea",
+    imageUrl: "images/menu-items/yuja-tea.jpg",
+    price: 4.00,
+    categories: [Category.Drink, Category.Hot, Category.Tea],
+  },
+  {
+    name: "Ginger Tea",
+    imageUrl: "images/menu-items/ginger-tea.jpg",
+    price: 4.00,
+    categories: [Category.Drink, Category.Hot, Category.Tea],
+  },
+  {
+    name: "Jujube Tea",
+    imageUrl: "images/menu-items/jujube-tea.jpg",
+    price: 4.50,
+    categories: [Category.Drink, Category.Hot, Category.Tea],
+  },
+  //#endregion
 ];
