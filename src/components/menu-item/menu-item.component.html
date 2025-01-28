@@ -14,8 +14,10 @@
 		</div>
 		<p class="text font-medium">{{ menuItem().price | currency }}</p>
 	</div>
-	<img
-		class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"
-		[src]="menuItem().imageUrl"
-		[alt]="menuItem().name" />
+  @if (menuItem().imageUrl && menuItem().imageUrl !== "") {
+    <img
+      class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"
+      [src]="menuItem().imageUrl"
+      [alt]="menuItem().name" />
+  }
 </div>

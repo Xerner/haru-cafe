@@ -6,6 +6,7 @@
 
 ## Tasks
 
+- [ ] Change cartoons to manga
 - [ ] Add more pictures
 - [ ] Add more descriptions
 - [ ] Add ingredients
