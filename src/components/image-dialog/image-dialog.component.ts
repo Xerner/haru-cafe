@@ -1,5 +1,8 @@
 import { DIALOG_DATA } from '@angular/cdk/dialog';
 import { Component, Inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 export interface IImageDialogData {
   src: string;
@@ -9,12 +12,14 @@ export interface IImageDialogData {
 @Component({
   selector: 'haru-image-dialog',
   templateUrl: './image-dialog.component.html',
-  host: {
-    class: "h-full w-full"
-  }
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+  ],
 })
 export class ImageDialogComponent {
   constructor(
-    @Inject(DIALOG_DATA) protected data: IImageDialogData
+    @Inject(DIALOG_DATA) protected data: IImageDialogData,
+    protected dialog: MatDialogRef<ImageDialogComponent>,
   ) { }
 }

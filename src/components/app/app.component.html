@@ -1,21 +1,21 @@
 <haru-navbar></haru-navbar>
 <!-- header -->
-<div class="bg-sims bg-center bg-cover">
-  <div class="mx-auto py-20 min-w-96 max-w-4xl">
+<div class="bg-sims bg-center bg-cover flex justify-center items-center max-h-52">
+  <div class="max-w-4xl p-8">
     <img
       src="images/haru-cafe-header-text.png"
       alt="haru-cafe-header-text" />
   </div>
 </div>
 
-<div class="bg-cyan-50 font-comic-sans px-20">
+<div class="bg-cyan-50 font-comic-sans">
 	<!-- more header -->
 	<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
 		<div class="flex flex-col justify-center">
 			<div>
 				<img
-					imageDialog="Hello We Are Haru Cafe"
-					class="h-96 mx-auto rounded"
+					imageDialog
+					class="max-h-96 mx-auto rounded"
 					src="images/hello-we-are-haru-cafe.png"
 					alt="hello-we-are-haru-cafe" />
 			</div>
@@ -25,8 +25,8 @@
 		<div class="flex flex-col justify-center">
 			<div>
 				<img
-					imageDialog="Menu Billboard"
-					class="h-96 mx-auto rounded"
+					imageDialog
+					class="max-h-96 mx-auto rounded"
 					src="images/haru-cafe-menu-billboard.png"
 					alt="haru-cafe-menu-billboard" />
 			</div>
@@ -36,7 +36,7 @@
 
 	<!-- menu -->
 	<haru-h1>Menu</haru-h1>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 p-4 gap-4">
+	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 mx-8 my-4 gap-4">
 		<img
 			imageDialog
 			class="rounded border border-slate-300"
@@ -59,16 +59,21 @@
 			alt="menu-page-4" />
 	</div>
 
-  <haru-h2 class="p-4">Search Our Menu</haru-h2>
-  <haru-filters></haru-filters>
-	<div class="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 p-8 gap-8">
-		@for (menuItem of menuItemsService.filteredMenuItems();
-		track $index) {
-		<haru-menu-item
-			[imageDialog]="menuItem.imageUrl"
-			[menuItem]="menuItem"></haru-menu-item>
-		}
-	</div>
-</div>
+  <div class="lg:mx-40 md:mx-20 mx-4 mb-4">
+    <haru-h2 class="my-4">Search Our Menu</haru-h2>
+    <div class="my-4">
+      <haru-filters></haru-filters>
+    </div>
+    <!-- <div class="flex flex-wrap justify-center lg:gap-8 gap-4 mt-8"> -->
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-8">
+      @for (menuItem of menuItemsService.filteredMenuItems();
+      track $index) {
+      <haru-menu-item
+        [imageDialog]="menuItem.imageUrl"
+        [menuItem]="menuItem"></haru-menu-item>
+      }
+    </div>
+  </div>
 
-<haru-footer></haru-footer>
+  <haru-footer></haru-footer>
+</div>

@@ -1,10 +1,21 @@
-<div class="xl:h-[9em] h-[6em] grid grid-cols-3 w-full h-full justify-between bg-cyan-100 text-black rounded-lg overflow-hidden">
-  <div class="p-4 col-span-2 flex flex-col justify-between">
-    <div>
-      <h1 class="font-bold">{{ menuItem().name }}</h1>
-      <p class="font-light xl:block hidden">{{ menuItem().description }}</p>
-    </div>
-    <p class="text font-medium">{{ menuItem().price | currency }}</p>
-  </div>
-  <img class="object-cover h-full bg-teal-100 border-l-2 border-teal-200 rounded-lg overflow-hidden" [src]="menuItem().imageUrl" [alt]="menuItem().name" />
+<div class="h-[6em] flex justify-between bg-cyan-100 rounded-lg flex">
+	<div class="m-3 grow flex flex-col justify-between xl:w-[11em] w-[14em]">
+		<div>
+			<div class="font-bold flex items-start gap-1">
+				@if (menuItem().isFavorite) {
+				<mat-icon
+					inline
+					class="text-yellow-500"
+					>star</mat-icon
+				>
+				}{{ menuItem().name }}
+			</div>
+			<!-- <p class="font-light text-sm xl:block hidden">{{ menuItem().description }}</p> -->
+		</div>
+		<p class="text font-medium">{{ menuItem().price | currency }}</p>
+	</div>
+	<img
+		class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"
+		[src]="menuItem().imageUrl"
+		[alt]="menuItem().name" />
 </div>
