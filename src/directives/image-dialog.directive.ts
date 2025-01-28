@@ -59,8 +59,8 @@ export class ImageDialogDirective {
     };
     this.dialog.open(ImageDialogComponent, { 
       data: data,
-      maxWidth: "95vw",
-      maxHeight: "90vh",
+      maxWidth: "75%",
+      maxHeight: "75%",
       panelClass: "bg-transparent",
     });
   }
