@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../navbar/navbar.component";
 import { MenuItemsService } from 'services/menu.service';
 import { MenuItemComponent } from "../menu-item/menu-item.component";
 import { ImageDialogDirective } from 'directives/image-dialog.directive';
-import { H1Component } from "../h1/h1.component";
 import { Category } from 'models/Categories';
-import { H2Component } from "../h2/h2.component";
 import { FooterComponent } from "../footer/footer.component";
 import { FiltersComponent } from "../filters/filters.component";
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'haru-root',
   imports: [
-    NavbarComponent,
     MenuItemComponent,
     ImageDialogDirective,
-    H1Component,
-    H2Component,
     FooterComponent,
-    FiltersComponent
+    FiltersComponent,
+    MatIconModule,
+    MatButtonModule,
+    MatTooltipModule,
 ],
   styles: [],
   templateUrl: "app.component.html",
@@ -28,5 +29,12 @@ export class AppComponent {
   
   constructor(
     protected menuItemsService: MenuItemsService,
-  ) { }
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer,
+  ) {
+    // iconRegistry.addSvgIcon('haru-cloud', sanitizer.bypassSecurityTrustResourceUrl('svgs/HaruCafe_Mascot.svg'));
+    // iconRegistry.addSvgIcon('haru-letters', sanitizer.bypassSecurityTrustResourceUrl('svgs/HaruCafe_Letters.svg'));
+    iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('svgs/instagram.svg'));
+    iconRegistry.addSvgIcon('uber-eats', sanitizer.bypassSecurityTrustResourceUrl('svgs/uber-eats.svg'));
+  }
 }

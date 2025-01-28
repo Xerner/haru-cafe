@@ -1,16 +1,70 @@
-<haru-navbar></haru-navbar>
 <!-- header -->
-<div class="bg-sims bg-center bg-cover flex justify-center items-center max-h-52">
-  <div class="max-w-4xl p-8">
-    <img
-      src="images/haru-cafe-header-text.png"
-      alt="haru-cafe-header-text" />
-  </div>
+<div class="bg-salmon xl:h-[95vh] h-[40vh] flex flex-col">
+	<div class="flex justify-between xl:m-8 lg:m-6 m-4">
+		<div class="font-bold lg:text-xl text-normal">HARU CAFE</div>
+		<div class="flex xl:gap-8 lg:gap-6 gap-4">
+			<a
+				class="hover:border-b hover:border-offset-4 border-black"
+				href="#specials"
+				>Specials</a
+			>
+			<a
+				class="hover:border-b hover:border-offset-4 border-black"
+				href="#menu"
+				>Menu</a
+			>
+			<a
+				class="hover:border-b hover:border-offset-4 border-black"
+				href="#location"
+				>Location</a
+			>
+		</div>
+	</div>
+	<div class="grid grid-cols-12 h-full">
+		<!-- spinning logo -->
+		<div class="relative w-full h-full col-span-6 col-start-1">
+			<div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+				<img
+					class="scale-50"
+					src="svgs/HaruCafe_Mascot.svg"
+					alt="haru-cloud" />
+			</div>
+			<div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+				<img
+					class="rotate-5s"
+					src="svgs/HaruCafe_Letters.svg"
+					alt="haru-letters" />
+			</div>
+		</div>
+		<div></div>
+		<!-- title -->
+		<div class="flex flex-col justify-center h-full col-span-4">
+			<hr class="border-black border xl:my-8 lg:my-6 md:my-4 my-2" />
+			<div class="xl:my-8 lg:my-6 md:my-4 my-2">
+				<div class="xl:text-6xl lg:text-4xl md:text-2xl text-lg text-center">FRESH JUICE</div>
+				<div class="xl:text-6xl lg:text-4xl md:text-2xl text-lg text-center">& CARTOONS</div>
+			</div>
+			<hr class="border-black border xl:my-8 lg:my-6 md:my-4 my-2" />
+		</div>
+		<div></div>
+	</div>
 </div>
 
-<div class="bg-cyan-50 font-comic-sans">
-	<!-- more header -->
-	<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
+<!-- specials -->
+<div
+	id="specials"
+	class="bg-white">
+	<div class="flex justify-center">
+		<div class="font-bold xl:text-4xl lg:text-2xl md:text-xl text-xs text-center mt-4">
+			HARU SPECIALS & FAVORITES
+		</div>
+	</div>
+	<img
+		class="w-full"
+		src="images/haru-cafe-menu-billboard.png"
+		alt="haru-cafe-menu-billboard" />
+</div>
+<!-- <div  id="specials" class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
 		<div class="flex flex-col justify-center">
 			<div>
 				<img
@@ -32,10 +86,11 @@
 			</div>
 			<div class="text-center mt-4">Taste that goes beyond your imagination!</div>
 		</div>
-	</div>
+	</div> -->
 
-	<!-- menu -->
-	<haru-h1>Menu</haru-h1>
+<!-- TODO: add a download button to download all menu pics as a single file (probably pdf) -->
+<!-- menu -->
+<!-- <haru-h1>Menu</haru-h1>
 	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 mx-8 my-4 gap-4">
 		<img
 			imageDialog
@@ -57,23 +112,83 @@
 			class="rounded border border-slate-300"
 			src="images/menu/4.png"
 			alt="menu-page-4" />
+	</div> -->
+
+<div
+	id="menu"
+	class="bg-cyan-50 lg:px-40 md:px-20 px-4 lg:py-8 py-4">
+	<div>
+		<div class="text-center lg:text-2xl: md:text-xl text-lg font-bold">ORDER</div>
+		<div class="my-4 flex justify-center gap-4">
+			<a
+				mat-icon-button
+        matTooltip="Google"
+				href="https://www.google.com/viewer/chooseprovider/?mid=/g/11l5x5k_0j"
+				target="_blank">
+				<img
+					src="svgs/google.svg"
+					alt="Google" />
+			</a>
+			<a
+				mat-icon-button
+        matTooltip="Uber Eats"
+				href="https://www.ubereats.com/store/haru-fresh-juice-cartoon/nVU5b1E7TnST0jYGqDDSaw?diningMode=DELIVERY&sc=SEARCH_SUGGESTION"
+				target="_blank">
+				<img
+					src="svgs/uber-eats.svg"
+					alt="Uber Eats" />
+			</a>
+			<a
+				mat-icon-button
+        matTooltip="Clover"
+				href="https://www.clover.com/online-ordering/haru-fresh-juice-cartoon-sterling-heights"
+				target="_blank">
+				<img
+					src="svgs/clover-logo.svg"
+					alt="Clover" />
+			</a>
+			<!-- <button mat-icon-button>
+          <a
+            href=""
+            target="_blank">
+            <img
+              src="svgs/bento-box.svg"
+              alt="Bento Box" />
+          </a>
+        </button> -->
+			<a
+				mat-icon-button
+        matTooltip="Grubhub"
+				href="https://www.grubhub.com/restaurant/haru-cafe-11445-15-mile-road-sterling-heights/7394008"
+				target="_blank">
+				<img
+					src="svgs/grubhub.svg"
+					alt="GrubHub" />
+			</a>
+			<a
+				mat-button
+        matTooltip="Seamless (powered by Grubhub)"
+				href="https://www.seamless.com/menu/haru-cafe-11445-15-mile-road-sterling-heights/7394008?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AAiGsoa0yDDk53TjyWQhiBoYlVxEmeZa97TDwzTpPD287xcz69CsKJ2OsZ329fq2omDdd2NZhy2CZpw2eBEdYlR3_ejvzGlumw%3D%3D"
+				target="_blank">
+				<img
+					class="h-4"
+					src="svgs/seamless.svg"
+					alt="Seamless" />
+			</a>
+		</div>
 	</div>
-
-  <div class="lg:mx-40 md:mx-20 mx-4 mb-4">
-    <haru-h2 class="my-4">Search Our Menu</haru-h2>
-    <div class="my-4">
-      <haru-filters></haru-filters>
-    </div>
-    <!-- <div class="flex flex-wrap justify-center lg:gap-8 gap-4 mt-8"> -->
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-8">
-      @for (menuItem of menuItemsService.filteredMenuItems();
-      track $index) {
-      <haru-menu-item
-        [imageDialog]="menuItem.imageUrl"
-        [menuItem]="menuItem"></haru-menu-item>
-      }
-    </div>
-  </div>
-
-  <haru-footer></haru-footer>
+	<div class="my-4 lg:text-2xl: md:text-xl text-lg text-center font-bold">SEARCH OUR MENU</div>
+	<div class="my-4">
+		<haru-filters></haru-filters>
+	</div>
+	<!-- <div class="flex flex-wrap justify-center lg:gap-8 gap-4 mt-8"> -->
+	<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-4">
+		@for (menuItem of menuItemsService.filteredMenuItems(); track $index) {
+		<haru-menu-item
+			[imageDialog]="menuItem.imageUrl"
+			[menuItem]="menuItem"></haru-menu-item>
+		}
+	</div>
 </div>
+
+<haru-footer id="location"></haru-footer>
