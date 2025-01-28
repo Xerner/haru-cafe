@@ -5,13 +5,27 @@
   <title>Haru Cafe 홈</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Haru Cafe is a cozy manga cafe where you can enjoy a wide selection of manga, delicious beverages, and a relaxing atmosphere.">
-  <meta name="author" content="Haru Cafe">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <meta name="description" content="Haru Cafe is a cozy manga cafe where you can enjoy a wide selection of manga, delicious beverages, and a relaxing atmosphere.">
+  <meta name="author" content="Haru Cafe">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Haru Cafe">
+  <meta property="og:description" content="Haru Cafe is a cozy manga cafe where you can enjoy a wide selection of manga, delicious beverages, and a relaxing atmosphere.">
+  <meta property="og:image" content="https://www.haru-cafe.kennethmead.dev/images/haru-cafe-logo.png">
+  <meta property="og:url" content="https://www.haru-cafe.kennethmead.dev">
+  <meta property="og:type" content="website">
 </head>
 <body class="mat-typography">
   <haru-root></haru-root>
+  <script type="application/ld+json">
+    {"@context" : "http://schema.org",
+     "@type" : "Organization",  
+      "name" : "Haru Cafe",
+      "url" : "https://www.haru-cafe.kennethmead.dev", 
+      "logo": "https://www.haru-cafe.kennethmead.dev/images/haru-cafe-logo.png" }
+    </script>
 </body>
 </html>
