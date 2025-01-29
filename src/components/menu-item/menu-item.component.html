@@ -1,7 +1,7 @@
-<div class="h-[6em] flex justify-between bg-cyan-100 rounded-lg flex">
+<div class="h-full flex justify-between bg-cyan-100 rounded-lg flex transition-all">
 	<div class="m-3 grow flex flex-col justify-between xl:w-[11em] w-[14em]">
 		<div>
-			<div class="font-bold flex items-start gap-1">
+			<div class="font-bold flex items-start gap-1 mb-2">
 				@if (menuItem().isFavorite) {
 				<mat-icon
 					inline
@@ -10,14 +10,33 @@
 				>
 				}{{ menuItem().name }}
 			</div>
-			<!-- <p class="font-light text-sm xl:block hidden">{{ menuItem().description }}</p> -->
+			@if (isDetailShown()) {
+			<p class="text-sm">{{ menuItem().description }}</p>
+			}
 		</div>
-		<p class="text font-medium">{{ menuItem().price | currency }}</p>
+		<div class="flex justify-between">
+			<p class="text font-medium">{{ menuItem().price | currency }}</p>
+			@if (hasDetail()) {
+			<button
+				matRipple
+				(click)="isDetailShown.set(!isDetailShown())"
+				class="rounded-full w-[24px] h-[24px]">
+				<mat-icon
+					[ngClass]="{
+          'transition-transform w-[1em] h-[1em]': true,
+          'rotate-180': isDetailShown(),
+        }"
+					>keyboard_arrow_down</mat-icon
+				>
+			</button>
+			}
+		</div>
 	</div>
-  @if (menuItem().imageUrl && menuItem().imageUrl !== "") {
-    <img
-      class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"
-      [src]="menuItem().imageUrl"
-      [alt]="menuItem().name" />
-  }
+	@if (menuItem().imageUrl && menuItem().imageUrl !== "") {
+	<img
+		imageDialog
+		class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"
+		[src]="menuItem().imageUrl"
+		[alt]="menuItem().name" />
+	}
 </div>

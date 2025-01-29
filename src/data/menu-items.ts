@@ -1,5 +1,5 @@
 import { Category } from "models/Categories";
-import { IMenuItem } from "models/IMenuItem";
+import { IMenuItem } from "models/interfaces/IMenuItem";
 
 export const MENU_ITEMS: IMenuItem[] = [
   //#region single flavor juices

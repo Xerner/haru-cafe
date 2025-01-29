@@ -1,12 +1,9 @@
 ## Questions
 
-- [ ] How should the paper menu be provided?
 - [ ] Should I keep the gift card section?
-- [ ] Is the spinning logo okay?
 
 ## Tasks
 
-- [ ] Change cartoons to manga
 - [ ] Add more pictures
 - [ ] Add more descriptions
 - [ ] Add ingredients

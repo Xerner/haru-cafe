@@ -1,4 +1,4 @@
-import { Category } from "./Categories";
+import { Category } from "../Categories";
 
 export interface IMenuItem {
   name: string;

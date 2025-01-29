@@ -1,14 +1,15 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { IMenuItem } from 'models/IMenuItem';
+import { IMenuItem } from 'models/interfaces/IMenuItem';
 import { MENU_ITEMS } from 'data/menu-items';
 import { Category } from 'models/Categories';
 import { FilterService } from './filter.service';
+import { MenuItem } from 'models/MenuItem';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuItemsService {
-  private menuItems = signal<IMenuItem[]>(MENU_ITEMS);
+  private menuItems = signal<MenuItem[]>(MENU_ITEMS.map(item => new MenuItem(item)).sort((menuItem1, menuItem2) => menuItem1.name.localeCompare(menuItem2.name)));
   filteredMenuItems = computed<IMenuItem[]>(() => {
     var menuItems = this.menuItems();
     var activeCategories = this.filtersService.activeCategories();

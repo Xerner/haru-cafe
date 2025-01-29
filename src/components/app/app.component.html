@@ -1,7 +1,8 @@
 <!-- header -->
-<div class="bg-salmon xl:h-[95vh] h-[40vh] flex flex-col">
+<div class="bg-salmon xl:h-[95vh] lg:h-[80vh] sm:h-[60vh] h-[40vh] flex flex-col">
+	<!-- header links -->
 	<div class="flex justify-between xl:m-8 lg:m-6 m-4">
-		<div class="font-bold lg:text-xl text-normal">HARU CAFE</div>
+		<div class="font-bold sm:text-xl text-lg text-normal">HARU CAFE</div>
 		<div class="flex xl:gap-8 lg:gap-6 gap-4">
 			<a
 				class="hover:border-b hover:border-offset-4 border-black"
@@ -22,7 +23,8 @@
 	</div>
 	<div class="grid grid-cols-12 h-full">
 		<!-- spinning logo -->
-		<div class="relative w-full h-full col-span-6 col-start-1">
+		<div
+			class="relative w-full h-full sm:col-span-6 col-span-5 sm:col-start-1 col-start-2">
 			<div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
 				<img
 					class="scale-50"
@@ -36,9 +38,8 @@
 					alt="haru-letters" />
 			</div>
 		</div>
-		<div></div>
 		<!-- title -->
-		<div class="flex flex-col justify-center h-full col-span-4">
+		<div class="flex flex-col justify-center h-full col-span-4 col-start-8">
 			<hr class="border-black border xl:my-8 lg:my-6 md:my-4 my-2" />
 			<div class="xl:my-8 lg:my-6 md:my-4 my-2">
 				<div class="xl:text-6xl lg:text-4xl md:text-2xl text-lg text-center">FRESH JUICE</div>
@@ -46,16 +47,15 @@
 			</div>
 			<hr class="border-black border xl:my-8 lg:my-6 md:my-4 my-2" />
 		</div>
-		<div></div>
 	</div>
 </div>
 
 <!-- specials -->
 <div
 	id="specials"
-	class="bg-white">
+	class="bg-white lg:py-8 py-4">
 	<div class="flex justify-center">
-		<div class="font-bold xl:text-4xl lg:text-2xl md:text-xl text-xs text-center mt-4">
+		<div class="font-bold xl:text-4xl lg:text-2xl sm:text-xl text-lg text-center mt-4">
 			HARU SPECIALS & FAVORITES
 		</div>
 	</div>
@@ -64,131 +64,87 @@
 		src="images/haru-cafe-menu-billboard.png"
 		alt="haru-cafe-menu-billboard" />
 </div>
-<!-- <div  id="specials" class="grid lg:grid-cols-2 grid-cols-1 gap-8 p-8 items-center text-2xl">
-		<div class="flex flex-col justify-center">
-			<div>
-				<img
-					imageDialog
-					class="max-h-96 mx-auto rounded"
-					src="images/hello-we-are-haru-cafe.png"
-					alt="hello-we-are-haru-cafe" />
-			</div>
 
-			<div class="text-center mt-4">We Are Open!</div>
-		</div>
-		<div class="flex flex-col justify-center">
-			<div>
-				<img
-					imageDialog
-					class="max-h-96 mx-auto rounded"
-					src="images/haru-cafe-menu-billboard.png"
-					alt="haru-cafe-menu-billboard" />
-			</div>
-			<div class="text-center mt-4">Taste that goes beyond your imagination!</div>
-		</div>
-	</div> -->
-
-<!-- TODO: add a download button to download all menu pics as a single file (probably pdf) -->
 <!-- menu -->
-<!-- <haru-h1>Menu</haru-h1>
-	<div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 mx-8 my-4 gap-4">
-		<img
-			imageDialog
-			class="rounded border border-slate-300"
-			src="images/menu/1.png"
-			alt="menu-page-1" />
-		<img
-			imageDialog
-			class="rounded border border-slate-300"
-			src="images/menu/2.png"
-			alt="menu-page-2" />
-		<img
-			imageDialog
-			class="rounded border border-slate-300"
-			src="images/menu/3.png"
-			alt="menu-page-3" />
-		<img
-			imageDialog
-			class="rounded border border-slate-300"
-			src="images/menu/4.png"
-			alt="menu-page-4" />
-	</div> -->
-
 <div
 	id="menu"
-	class="bg-cyan-50 lg:px-40 md:px-20 px-4 lg:py-8 py-4">
-	<div>
-		<div class="text-center lg:text-2xl: md:text-xl text-lg font-bold">ORDER</div>
-		<div class="my-4 flex justify-center gap-4">
-			<a
-				mat-icon-button
-        matTooltip="Google"
-				href="https://www.google.com/viewer/chooseprovider/?mid=/g/11l5x5k_0j"
-				target="_blank">
-				<img
-					src="svgs/google.svg"
-					alt="Google" />
-			</a>
-			<a
-				mat-icon-button
-        matTooltip="Uber Eats"
-				href="https://www.ubereats.com/store/haru-fresh-juice-cartoon/nVU5b1E7TnST0jYGqDDSaw?diningMode=DELIVERY&sc=SEARCH_SUGGESTION"
-				target="_blank">
-				<img
-					src="svgs/uber-eats.svg"
-					alt="Uber Eats" />
-			</a>
-			<a
-				mat-icon-button
-        matTooltip="Clover"
-				href="https://www.clover.com/online-ordering/haru-fresh-juice-cartoon-sterling-heights"
-				target="_blank">
-				<img
-					src="svgs/clover-logo.svg"
-					alt="Clover" />
-			</a>
-			<!-- <button mat-icon-button>
-          <a
-            href=""
-            target="_blank">
-            <img
-              src="svgs/bento-box.svg"
-              alt="Bento Box" />
-          </a>
-        </button> -->
-			<a
-				mat-icon-button
-        matTooltip="Grubhub"
-				href="https://www.grubhub.com/restaurant/haru-cafe-11445-15-mile-road-sterling-heights/7394008"
-				target="_blank">
-				<img
-					src="svgs/grubhub.svg"
-					alt="GrubHub" />
-			</a>
-			<a
-				mat-button
-        matTooltip="Seamless (powered by Grubhub)"
-				href="https://www.seamless.com/menu/haru-cafe-11445-15-mile-road-sterling-heights/7394008?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AAiGsoa0yDDk53TjyWQhiBoYlVxEmeZa97TDwzTpPD287xcz69CsKJ2OsZ329fq2omDdd2NZhy2CZpw2eBEdYlR3_ejvzGlumw%3D%3D"
-				target="_blank">
-				<img
-					class="h-4"
-					src="svgs/seamless.svg"
-					alt="Seamless" />
-			</a>
-		</div>
+	class="bg-cyan-50 lg:px-40 md:px-20 px-4 lg:py-8 py-4 flex flex-col gap-8">
+	<div class="text-center lg:text-2xl: md:text-xl text-lg font-bold">ORDER</div>
+	<div class="flex justify-center gap-4">
+		<a
+			mat-icon-button
+			matTooltip="Google"
+			href="https://www.google.com/viewer/chooseprovider/?mid=/g/11l5x5k_0j"
+			target="_blank">
+			<img
+				src="svgs/google.svg"
+				alt="Google" />
+		</a>
+		<a
+			mat-icon-button
+			matTooltip="Uber Eats"
+			href="https://www.ubereats.com/store/haru-fresh-juice-cartoon/nVU5b1E7TnST0jYGqDDSaw?diningMode=DELIVERY&sc=SEARCH_SUGGESTION"
+			target="_blank">
+			<img
+				src="svgs/uber-eats.svg"
+				alt="Uber Eats" />
+		</a>
+		<a
+			mat-icon-button
+			matTooltip="Clover"
+			href="https://www.clover.com/online-ordering/haru-fresh-juice-cartoon-sterling-heights"
+			target="_blank">
+			<img
+				src="svgs/clover-logo.svg"
+				alt="Clover" />
+		</a>
+		<!-- <button mat-icon-button>
+        <a
+          href=""
+          target="_blank">
+          <img
+            src="svgs/bento-box.svg"
+            alt="Bento Box" />
+        </a>
+      </button> -->
+		<a
+			mat-icon-button
+			matTooltip="Grubhub"
+			href="https://www.grubhub.com/restaurant/haru-cafe-11445-15-mile-road-sterling-heights/7394008"
+			target="_blank">
+			<img
+				src="svgs/grubhub.svg"
+				alt="GrubHub" />
+		</a>
+		<a
+			mat-button
+			matTooltip="Seamless (powered by Grubhub)"
+			href="https://www.seamless.com/menu/haru-cafe-11445-15-mile-road-sterling-heights/7394008?utm_source=google&utm_medium=organic&utm_campaign=place-action-link&pickup=true&rwg_token=AAiGsoa0yDDk53TjyWQhiBoYlVxEmeZa97TDwzTpPD287xcz69CsKJ2OsZ329fq2omDdd2NZhy2CZpw2eBEdYlR3_ejvzGlumw%3D%3D"
+			target="_blank">
+			<img
+				class="h-4"
+				src="svgs/seamless.svg"
+				alt="Seamless" />
+		</a>
 	</div>
-	<div class="my-4 lg:text-2xl: md:text-xl text-lg text-center font-bold">SEARCH OUR MENU</div>
-	<div class="my-4">
-		<haru-filters></haru-filters>
-	</div>
+	<div class="lg:text-2xl: md:text-xl text-lg text-center font-bold">SEARCH OUR MENU</div>
+	<haru-filters></haru-filters>
 	<!-- <div class="flex flex-wrap justify-center lg:gap-8 gap-4 mt-8"> -->
-	<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-8 gap-4 mt-4">
+	<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-[2em] gap-[1em] transition-all">
 		@for (menuItem of menuItemsService.filteredMenuItems(); track $index) {
 		<haru-menu-item
-			[imageDialog]="menuItem.imageUrl"
+			#menuItemRef
+			[ngClass]="{
+        'transition-all': true,
+        'row-span-1 h-[6em]': !menuItemRef.isDetailShown(),
+        'row-span-2 lg:h-[14em] h-[13em]': menuItemRef.isDetailShown(),
+      }"
 			[menuItem]="menuItem"></haru-menu-item>
 		}
 	</div>
 </div>
 
-<haru-footer id="location"></haru-footer>
+<!-- location -->
+<haru-footer
+	class="lg:py-8 py-4"
+	id="location"></haru-footer>

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItemsService } from 'services/menu.service';
 import { MenuItemComponent } from "../menu-item/menu-item.component";
-import { ImageDialogDirective } from 'directives/image-dialog.directive';
 import { Category } from 'models/Categories';
 import { FooterComponent } from "../footer/footer.component";
 import { FiltersComponent } from "../filters/filters.component";
@@ -9,17 +8,18 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'haru-root',
   imports: [
     MenuItemComponent,
-    ImageDialogDirective,
     FooterComponent,
     FiltersComponent,
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    CommonModule,
 ],
   styles: [],
   templateUrl: "app.component.html",
