@@ -370,7 +370,7 @@ export const MENU_ITEMS: IMenuItem[] = [
   },
   {
     name: "Hot Yuza Matcha Latte",
-    description: "Hot water, yuza tea, matcha powder, and steamed milk",
+    description: "Hot water, yuza tea, matcha powder, and steamed milk. Yuza is a citrus fruit from Korea.",
     price: 6.90,
     categories: [Category.Drink, Category.Hot, Category.NonCoffee],
   },
@@ -489,21 +489,25 @@ export const MENU_ITEMS: IMenuItem[] = [
   //#region hot tea
   {
     name: "Green Tea",
+    description: "",
     price: 3.90,
     categories: [Category.Drink, Category.Hot, Category.Tea],
   },
   {
-    name: "Yuja Tea",
+    name: "Yuza Tea",
+    description: "Yuza tea with honey. Yuza is a citrus fruit from Korea.",
     price: 4.50,
     categories: [Category.Drink, Category.Hot, Category.Tea],
   },
   {
     name: "Ginger Tea",
+    description: "Ginger tea with honey",
     price: 4.50,
     categories: [Category.Drink, Category.Hot, Category.Tea],
   },
   {
     name: "Jujube Tea",
+    description: "Jujube tea with honey. Jujube is a red date from Korea.",
     price: 4.90,
     categories: [Category.Drink, Category.Hot, Category.Tea],
   },
