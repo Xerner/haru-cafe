@@ -4,25 +4,25 @@ import { IMenuItem } from "models/interfaces/IMenuItem";
 export const MENU_ITEMS: IMenuItem[] = [
   //#region single flavor juices
   {
-    name: "Watermelon",
+    name: "Watermelon Juice",
     description: "A refreshing drink made from fresh watermelon.",
     price: 6.50,
     categories: [Category.Drink, Category.Juice, Category.SingleFlavor],
   },
   {
-    name: "Grapefruit",
+    name: "Grapefruit Juice",
     description: "A tangy and refreshing drink made from fresh grapefruit.",
     price: 6.00,
     categories: [Category.Drink, Category.Juice, Category.SingleFlavor],
   },
   {
-    name: "Mango",
+    name: "Mango Juice",
     description: "A sweet and tropical drink made from fresh mangoes.",
     price: 6.50,
     categories: [Category.Drink, Category.Juice, Category.SingleFlavor],
   },
   {
-    name: "Orange",
+    name: "Orange Juice",
     imageUrl: "images/menu-items/orange-juice.jpg",
     description: "A classic breakfast drink made from fresh oranges.",
     price: 6.00,
@@ -40,39 +40,39 @@ export const MENU_ITEMS: IMenuItem[] = [
     isFavorite: true,
   },
   {
-    name: "Watermelon + Pineapple",
+    name: "Watermelon + Pineapple Juice",
     description: "A tropical blend of watermelon and pineapple juices.",
     price: 6.90,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
   },
   {
-    name: "Strawberry + Kiwi",
+    name: "Strawberry + Kiwi Juice",
     imageUrl: "images/menu-items/strawberry-kiwi-juice.jpg",
     description: "",
     price: 6.50,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
   },
   {
-    name: "Strawberry + Banana",
+    name: "Strawberry + Banana Juice",
     description: "",
     price: 6.00,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
   },
   {
-    name: "Kiwi + Banana",
+    name: "Kiwi + Banana Juice",
     description: "",
     price: 6.50,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
   },
   {
-    name: "Orange + Pineapple",
+    name: "Orange + Pineapple Juice",
     imageUrl: "images/menu-items/orange-pineapple-juice.jpg",
     description: "",
     price: 7.50,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
   },
   {
-    name: "Orange + Grapefruit",
+    name: "Orange + Grapefruit Juice",
     description: "",
     price: 6.50,
     categories: [Category.Drink, Category.Juice, Category.MixedFlavor],
@@ -155,8 +155,6 @@ export const MENU_ITEMS: IMenuItem[] = [
   //#region bakery
   {
     name: "Chocolate Muffin", 
-    // imageUrl: "images/menu-items/muffin.jpg",
-    description: "Chocolate, blueberry, or banana",
     price: 1.90,
     categories: [Category.Food, Category.Bakery],
   },
