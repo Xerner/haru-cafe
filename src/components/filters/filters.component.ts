@@ -34,7 +34,7 @@ export class FiltersComponent {
     },
     {
       category: Category.Drink,
-      childCategories: [Category.Hot, Category.Iced, Category.Juice],
+      childCategories: [Category.Hot, Category.Iced, Category.Juice, Category.Anime],
     },
     {
       category: Category.Hot,

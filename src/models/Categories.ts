@@ -15,6 +15,7 @@ export enum Category {
   Ade = "Ade",
   Seasonal = "Seasonal",
   Tea = "Tea",
+  Anime = "Anime",
 }
 
 export const MutuallyExclusiveCategories: Category[][] = [
