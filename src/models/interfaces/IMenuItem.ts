@@ -1,3 +1,4 @@
+import { Size } from "models/Size";
 import { Category } from "../Categories";
 
 export interface IMenuItem {
@@ -8,4 +9,5 @@ export interface IMenuItem {
   categories?: Category[];
   isFavorite?: boolean;
   isActive?: boolean;
+  size?: Size;
 }

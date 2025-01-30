@@ -1,9 +1,9 @@
 import { CommonModule, CurrencyPipe } from '@angular/common';
-import { Component, computed, input, signal, viewChild } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { Component, computed, input, signal } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ImageDialogDirective } from 'directives/image-dialog.directive';
+import { Category } from 'models/Categories';
 import { IMenuItem } from 'models/interfaces/IMenuItem';
 
 @Component({
@@ -18,12 +18,8 @@ import { IMenuItem } from 'models/interfaces/IMenuItem';
   templateUrl: './menu-item.component.html',
 })
 export class MenuItemComponent {
+  Category = Category;
   menuItem = input.required<IMenuItem>();
-  imageElement = viewChild.required<HTMLImageElement>('imgRef');
   isDetailShown = signal<boolean>(false);
   hasDetail = computed<boolean>(() => typeof this.menuItem().description === "string" && this.menuItem().description!.length > 0);
-
-  constructor() {
-
-  }
 }

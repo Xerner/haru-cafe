@@ -1,5 +1,5 @@
 <div class="flex flex-col w-full gap-0.5">
-	@for (categoryGroup of getCategoryNodes(); track $index) {
+	@for (categoryGroup of categoryGraphService.getCategoryNodes(); track $index) {
     <mat-button-toggle-group
       class="w-full !grid"
       hideMultipleSelectionIndicator
@@ -10,7 +10,7 @@
         [value]="category"
         class="col-span-1"
         (change)="onToggleButtonClicked($event)"
-        [checked]="isCategorySelected(category)"
+        [checked]="categoryGraphService.isCategorySelected(category)"
         >{{ category }}</mat-button-toggle
       >
       }

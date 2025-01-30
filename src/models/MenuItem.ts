@@ -1,5 +1,6 @@
 import { Category } from "./Categories";
 import { IMenuItem } from "./interfaces/IMenuItem";
+import { Size } from "./Size";
 
 export class MenuItem implements IMenuItem {
   name: string;
@@ -9,6 +10,7 @@ export class MenuItem implements IMenuItem {
   categories?: Category[] | undefined;
   isFavorite?: boolean | undefined;
   isActive?: boolean | undefined;
+  size?: Size | undefined;
 
   constructor(private menuItem: IMenuItem) {
     this.name = menuItem.name;
@@ -18,6 +20,7 @@ export class MenuItem implements IMenuItem {
     this.categories = menuItem.categories;
     this.isFavorite = menuItem.isFavorite;
     this.isActive = menuItem.isActive;
+    this.size = menuItem.size;
   }
 
   hasDescription() {

@@ -15,7 +15,18 @@
 			}
 		</div>
 		<div class="flex justify-between">
-			<p class="text font-medium">{{ menuItem().price | currency }}</p>
+			<div class="flex gap-2 items-center">
+				<p class="text font-medium">{{ menuItem().price | currency }}</p>
+        @if (menuItem().size !== undefined) {
+          <p class="text-sm text-gray-500">{{ menuItem().size }}</p>
+          }
+				@if (menuItem().categories?.includes(Category.Hot)) {
+				<p class="text-sm text-gray-500">Hot</p>
+				}
+        @if (menuItem().categories?.includes(Category.Cold)) {
+          <p class="text-sm text-gray-500">Cold</p>
+          } 
+			</div>
 			@if (hasDetail()) {
 			<button
 				matRipple
