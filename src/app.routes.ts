@@ -1,5 +1,8 @@
 import { Routes } from '@angular/router';
+import { LandingPageComponent } from 'components/landing-page/landing-page.component';
 
 export const routes: Routes = [
-  { path: '홈',   redirectTo: '' },
+  { path: '',     component: LandingPageComponent },
+  { path: '홈',   redirectTo: '/' },
+  { path: '**',   redirectTo: '/' },
 ];
