@@ -9,6 +9,8 @@ import { FooterComponent } from 'components/footer/footer.component';
 import { MenuItemComponent } from 'components/menu-item/menu-item.component';
 import { Category } from 'models/Categories';
 import { MenuItemsService } from 'services/menu.service';
+import { CarouselComponent } from "../carousel/carousel.component";
+import { FilterService } from 'services/filter.service';
 
 @Component({
   selector: 'haru-landing-page',
@@ -20,16 +22,22 @@ import { MenuItemsService } from 'services/menu.service';
     MatButtonModule,
     MatTooltipModule,
     CommonModule,
-  ],
+    CarouselComponent
+],
   templateUrl: './landing-page.component.html',
 })
 export class LandingPageComponent {
   Category = Category;
   
+  createEmptyArray(length: number) {
+    return new Array(length);
+  }
+
   constructor(
     protected menuItemsService: MenuItemsService,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer,
+    protected filterService: FilterService,
   ) {
     iconRegistry.addSvgIcon('instagram', sanitizer.bypassSecurityTrustResourceUrl('svgs/instagram.svg'));
     iconRegistry.addSvgIcon('uber-eats', sanitizer.bypassSecurityTrustResourceUrl('svgs/uber-eats.svg'));

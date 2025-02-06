@@ -21,5 +21,5 @@ export class MenuItemComponent {
   Category = Category;
   menuItem = input.required<IMenuItem>();
   isDetailShown = signal<boolean>(false);
-  hasDetail = computed<boolean>(() => typeof this.menuItem().description === "string" && this.menuItem().description!.length > 0);
+  hasDetail = computed<boolean>(() => this.menuItem().imageUrl !== undefined || (typeof this.menuItem().description === "string" && this.menuItem().description!.length > 0));
 }

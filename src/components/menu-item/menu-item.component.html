@@ -10,22 +10,26 @@
 				>
 				}{{ menuItem().name }}
 			</div>
-			@if (isDetailShown()) {
+			@if (isDetailShown()) { @if (menuItem().description) {
 			<p class="text-sm">{{ menuItem().description }}</p>
-			}
+			} @if (menuItem().imageUrl && menuItem().imageUrl !== "") {
+			<img
+				imageDialog
+				class="object-cover mx-auto xl:lg:md:my-4 my-2 xl:lg:md:h-[10em] xl:lg:md:h-[12em] xs:sm:w-full bg-teal-100 border-x-2 border-teal-200 rounded-lg"
+				[src]="menuItem().imageUrl"
+				[alt]="menuItem().name" />
+			} }
 		</div>
 		<div class="flex justify-between">
 			<div class="flex gap-2 items-center">
 				<p class="text font-medium">{{ menuItem().price | currency }}</p>
-        @if (menuItem().size !== undefined) {
-          <p class="text-sm text-gray-500">{{ menuItem().size }}</p>
-          }
-				@if (menuItem().categories?.includes(Category.Hot)) {
+				@if (menuItem().size !== undefined) {
+				<p class="text-sm text-gray-500">{{ menuItem().size }}</p>
+				} @if (menuItem().categories?.includes(Category.Hot)) {
 				<p class="text-sm text-gray-500">Hot</p>
+				} @if (menuItem().categories?.includes(Category.Cold)) {
+				<p class="text-sm text-gray-500">Cold</p>
 				}
-        @if (menuItem().categories?.includes(Category.Cold)) {
-          <p class="text-sm text-gray-500">Cold</p>
-          } 
 			</div>
 			@if (hasDetail()) {
 			<button
@@ -43,7 +47,7 @@
 			}
 		</div>
 	</div>
-	@if (menuItem().imageUrl && menuItem().imageUrl !== "") {
+	@if (isDetailShown() === false && menuItem().imageUrl && menuItem().imageUrl !== "") {
 	<img
 		imageDialog
 		class="object-cover w-[6em] bg-teal-100 border-l-2 border-teal-200 rounded-lg"

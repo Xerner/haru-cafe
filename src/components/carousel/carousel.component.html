@@ -1,43 +1,53 @@
-<div class="navigation-wrapper">
-  <div class="keen-slider keen-slider--vertical" #sliderRef>
-    <div class="keen-slider__slide number-slide1">1</div>
-    <div class="keen-slider__slide number-slide2">2</div>
-    <div class="keen-slider__slide number-slide3">3</div>
-    <div class="keen-slider__slide number-slide4">4</div>
-    <div class="keen-slider__slide number-slide5">5</div>
-    <div class="keen-slider__slide number-slide6">6</div>
-  </div>
-  <svg
-    [ngClass]="
-      'arrow arrow--left ' + (currentSlide === 0 ? 'arrow--disabled' : '')
-    "
-    (click)="slider?.prev()"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <path
-      d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"
-    />
-  </svg>
-  <svg
-    *ngIf="slider"
-    [ngClass]="
-      'arrow arrow--right ' +
-      (slider.track.details.slides.length - 1 === currentSlide
-        ? 'arrow--disabled'
-        : '')
-    "
-    (click)="slider.next()"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-  </svg>
+<!-- content -->
+<div
+	class="keen-slider keen-slider--vertical"
+	#sliderRef>
+	<ng-content />
 </div>
-<div class="dots">
-  <button
-    (click)="slider?.moveToIdx(i)"
-    *ngFor="let slide of dotHelper; let i = index"
-    [class]="'dot ' + (i === currentSlide ? 'active' : '')"
-  ></button>
+<!-- arrows and dots -->
+@if (this.dotHelper().length > 1 && this.slider()) {
+<div class="flex justify-center lg:mt-8 mg:mt-6 mt-4 gap-3">
+	<button
+		matRipple
+		(click)="slider()?.prev()"
+		class="rounded-full w-8 h-8 flex justify-center items-center">
+		<svg
+			[ngClass]="{
+        'w-4 h-4': true,
+        'fill-slate-900/25': currentSlide() === 0,
+        'fill-cyan-200': currentSlide() !== 0,
+      }"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24">
+			<path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+		</svg>
+	</button>
+	@for (slide of dotHelper(); track $index) {
+	<button
+		matRipple
+		[matRippleCentered]="true"
+		(click)="slider()?.moveToIdx($index)"
+		[ngClass]="{
+          'w-8 h-8 rounded-full text-sm font-light bg-cyan-100 active:bg-cyan-300': true,
+          'active': $index === currentSlide(),
+        }">
+		{{ $index + 1 }}
+	</button>
+	}
+	<button
+		matRipple
+		(click)="slider()?.next()"
+		class="rounded-full w-8 h-8 flex justify-center items-center">
+		<svg
+			[ngClass]="{
+				'w-4 h-4': true,
+				'fill-slate-900/25': slider()!.slides.length - 1 === currentSlide(),
+        'fill-cyan-200': slider()!.slides.length - 1 !== currentSlide(),
+      }"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24">
+			<path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+		</svg>
+	</button>
 </div>
+}

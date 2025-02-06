@@ -15,10 +15,20 @@ export class MenuItemsService {
     var activeCategories = this.filtersService.activeCategories();
     return menuItems
       .filter(item => item.isActive !== false)
-      .filter(item => item.categories !== undefined 
-                   && item.categories.length > 0 
-                   && (activeCategories.length === 0 || activeCategories.every(category => item.categories!.includes(category))));
+      .filter(item => item.categories !== undefined
+        && item.categories.length > 0
+        && (activeCategories.length === 0 || activeCategories.every(category => item.categories!.includes(category))));
   });
+  paginatedMenuItems = computed<IMenuItem[][]>(() => {
+    var filteredMenuItems = this.filteredMenuItems();
+    var pageSize = this.pageSize();
+    var pages = [];
+    for (var i = 0; i < filteredMenuItems.length; i += pageSize) {
+      pages.push(filteredMenuItems.slice(i, i + pageSize));
+    }
+    return pages;
+  })
+  pageSize = signal<number>(9);
 
   constructor(
     private filtersService: FilterService,
@@ -29,8 +39,8 @@ export class MenuItemsService {
       return [];
     }
     return this.menuItems()
-      .filter(item => item.categories !== undefined 
-        && item.categories.length > 0 
+      .filter(item => item.categories !== undefined
+        && item.categories.length > 0
         && categories.every(category => item.categories!.includes(category)))
       .sort((a, b) => a.name.localeCompare(b.name));
   }

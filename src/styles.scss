@@ -3,6 +3,7 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 @use 'styles/rotate.scss';
+@use 'styles/keen-slider.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
