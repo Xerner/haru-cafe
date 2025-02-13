@@ -245,6 +245,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Strawberry Flavored Mochi Ice Cream",
     description: "Strawberry ice cream inside mochi with strawberry slices, and a chocolate drizzle.",
     price: 3.90,
+    imageUrl: "images/menu-items/strawberry-flavored-mochi-ice-cream.jpg",
     categories: [Category.Food, Category.Snack],
   },
   {
