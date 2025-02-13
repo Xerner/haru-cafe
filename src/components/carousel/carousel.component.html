@@ -1,6 +1,6 @@
 <!-- content -->
 @if (this.dotHelper().length > 1 && this.slider()) {
-<div class="flex justify-center lg:hidden mg:mb-6 mb-4 gap-3">
+<div class="flex justify-center lg:hidden md:mb-6 mb-4 gap-3">
 	<ng-container *ngTemplateOutlet="dotsTemplate"></ng-container>
 </div>
 }
@@ -10,7 +10,7 @@
 	<ng-content />
 </div>
 @if (this.dotHelper().length > 1 && this.slider()) {
-<div class="flex justify-center lg:mt-8 mg:mt-6 mt-4 gap-3">
+<div class="flex justify-center lg:mt-8 md:mt-6 mt-4 gap-3">
 	<ng-container *ngTemplateOutlet="dotsTemplate"></ng-container>
 </div>
 }
