@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { Category, MutuallyExclusiveCategories } from 'models/Categories';
+import { Category, MutuallyExclusiveCategories } from 'src/models/Categories';
 
 @Injectable({
   providedIn: 'root'

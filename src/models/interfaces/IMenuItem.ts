@@ -1,4 +1,4 @@
-import { Size } from "models/Size";
+import { Size } from "src/models/Size";
 import { Category } from "../Categories";
 
 export interface IMenuItem {

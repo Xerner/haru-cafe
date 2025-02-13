@@ -1,7 +1,6 @@
 import { Injectable, signal } from '@angular/core';
-import { MatButtonToggleChange } from '@angular/material/button-toggle';
-import { CATEGORY_GRAPH, ICategoryNode } from 'data/category-nodes';
-import { Category } from 'models/Categories';
+import { CATEGORY_GRAPH, ICategoryNode } from 'src/data/category-nodes';
+import { Category } from 'src/models/Categories';
 import { FilterService } from './filter.service';
 
 @Injectable({

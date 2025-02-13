@@ -1,4 +1,4 @@
-import { Category } from "models/Categories";
+import { Category } from "src/models/Categories";
 
 export interface ICategoryNode {
   category: Category | null;

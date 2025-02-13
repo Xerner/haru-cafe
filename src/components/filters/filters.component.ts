@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonToggleChange, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatChipsModule } from '@angular/material/chips';
-import { Category } from 'models/Categories';
-import { FilterService } from 'services/filter.service';
-import { ICategoryNode } from 'data/category-nodes';
-import { CategoryGraphService } from 'services/category-graph.service';
+import { Category } from 'src/models/Categories';
+import { FilterService } from 'src/services/filter.service';
+import { ICategoryNode } from 'src/data/category-nodes';
+import { CategoryGraphService } from 'src/services/category-graph.service';
 
 @Component({
   selector: 'haru-filters',

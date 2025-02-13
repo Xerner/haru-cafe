@@ -1,9 +1,9 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { IMenuItem } from 'models/interfaces/IMenuItem';
-import { MENU_ITEMS } from 'data/menu-items';
-import { Category } from 'models/Categories';
+import { IMenuItem } from 'src/models/interfaces/IMenuItem';
+import { MENU_ITEMS } from 'src/data/menu-items';
+import { Category } from 'src/models/Categories';
 import { FilterService } from './filter.service';
-import { MenuItem } from 'models/MenuItem';
+import { MenuItem } from 'src/models/MenuItem';
 
 @Injectable({
   providedIn: 'root'

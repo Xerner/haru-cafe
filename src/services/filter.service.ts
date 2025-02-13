@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable, signal } from '@angular/core';
-import { Category } from 'models/Categories';
+import { Category } from 'src/models/Categories';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
-import { Category } from "models/Categories";
-import { IMenuItem } from "models/interfaces/IMenuItem";
-import { Size } from "models/Size";
+import { Category } from "src/models/Categories";
+import { IMenuItem } from "src/models/interfaces/IMenuItem";
+import { Size } from "src/models/Size";
 
 export const MENU_ITEMS: IMenuItem[] = [
   //#region single flavor juices
@@ -303,6 +303,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Cloud Latte",
     description: "Sweet Korean mixed coffee with steamed milk and a cloud of whipped steamed milk on top",
     price: 6.00,
+    imageUrl: "images/menu-items/cloud-latte.jpg",
     categories: [Category.Drink, Category.Hot, Category.Coffee],
     size: Size["16oz"],
   },
@@ -326,6 +327,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Expresso",
     description: "2 shots of expresso",
     price: 3.00,
+    imageUrl: "images/menu-items/expresso.jpg",
     categories: [Category.Drink, Category.Hot, Category.Coffee],
     size: Size["16oz"],
   },
@@ -425,7 +427,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Hot Yuza Matcha Latte",
     description: "Hot water, yuza tea, matcha powder, and steamed milk. Yuza is a citrus fruit from Korea.",
     price: 6.90,
-    imageUrl: "images/menu-items/yuza-matcha-latte.jpg",
     categories: [Category.Drink, Category.Hot, Category.NonCoffee],
     size: Size["16oz"],
   },
@@ -519,6 +520,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Peach Lemon Tea",
     description: "Peach iced tea with lemonade",
     price: 5.50,
+    imageUrl: "images/menu-items/peach-lemon-tea.jpg",
     categories: [Category.Drink, Category.Cold, Category.Ade],
     size: Size["20oz"],
   },
@@ -545,7 +547,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Fall Pumpkin Spice Latte",
     description: "2 shots of expresso, steamed milk, cinnamon powder, pumpkin powder, and topped with whipped cream and more cinnamon powder",
     price: 6.50,
-    imageUrl: "images/menu-items/fall-pumpkin-spice-latte.png",
+    imageUrl: "images/menu-items/fall-pumpkin-spice-latte.jpg",
     categories: [Category.Drink, Category.Hot, Category.Coffee, Category.Seasonal, Category.Specials],
     size: Size["16oz"],
   },
@@ -603,6 +605,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Chocolate Form: Flowing Mint Latte",
     description: "Inspired by Tanjiro from Demon Slayer. Chocolate syrup, mint syrup, milk, and whipped cream with sprinkles",
     price: 7.00,
+    imageUrl: "images/menu-items/chocolate-form-flowing-mint-latte.jpg",
     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -610,6 +613,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Sweet Demon Latte",
     description: "Inspired by Nezuko from Demon Slayer. Chocolate syrup, strawberry syrup, milk, and whipped cream with sprinkles",
     price: 7.00,
+    imageUrl: "images/menu-items/sweet-demon-latte.jpg",
     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -617,6 +621,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Love Blossom Matcha Latte",
     description: "Inspired by Mitsuri from Demon Slayer. Strawberry syrup, milk, matcha powder, and a whole strawberry",
     price: 7.00,
+    imageUrl: "images/menu-items/love-blossom-matcha-latte.jpg",
     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -624,7 +629,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Mango Flameade",
     description: "Inspired by Rengoku from Demon Slayer. Mango syrup, blood orange syrup, Sprite, and a slice of orange",
     price: 6.00,
-    imageUrl: "images/menu-items/mango-flameade.png",
+    imageUrl: "images/menu-items/mango-flameade.jpg",
     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -632,6 +637,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Harmonic Grapeade",
     description: "Inspired by Tengen from Demon Slayer. Grape syrup, Sprite, and a slice of kiwi",
     price: 5.50,
+    imageUrl: "images/menu-items/harmonic-grapeade.jpg",
     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -639,6 +645,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Lemonade Type: Explosive Razz",
     description: "Inspired by Akaza from Demon Slayer. Raspberry syrup, lemon syrup, blue curacao syrup, Sprite, and a slice of lemon",
     price: 6.00,
+    imageUrl: "images/menu-items/lemonade-type-explosive-razz.jpg",
     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -654,6 +661,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Cursed Turbo Razz Soda",
     description: "Inspired By Okarun from Dandadan. Raspberry syrup, blue curacao syrup, blood orange syrup, Sprite, whipped cream, with a raspberry topping",
     price: 7.00,
+    imageUrl: "images/menu-items/cursed-turbo-razz-soda.jpg",
     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -661,6 +669,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Strawberry Butterfly Spiral",
     description: "Inspired By Aira from Dandadan. Strawberry syrup, Sprite, butterfly pea powder, water, and a whole strawberry",
     price: 6.00,
+    imageUrl: "images/menu-items/strawberry-butterfly-spiral.jpg",
     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },
@@ -668,6 +677,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Arisen Lychee Lemonade",
     description: "Inspired By Jin Woo from Solo Leveling. Lychee syrup, lemon syrup, blue curacao syrup, blood orange syrup, Sprite, and a slice of lemon",
     price: 6.00,
+    imageUrl: "images/menu-items/arisen-lychee-lemonade.jpg",
     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
     size: Size["20oz"],
   },

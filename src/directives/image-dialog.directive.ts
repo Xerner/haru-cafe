@@ -1,6 +1,6 @@
 import { ComponentRef, Directive, ElementRef, Input, input, ViewContainerRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { IImageDialogData, ImageDialogComponent } from 'components/image-dialog/image-dialog.component';
+import { IImageDialogData, ImageDialogComponent } from 'src/components/image-dialog/image-dialog.component';
 
 export interface IImageElementProvider extends HTMLElement {
   imageElement: HTMLImageElement | null;

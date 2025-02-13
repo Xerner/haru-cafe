@@ -4,13 +4,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FiltersComponent } from 'components/filters/filters.component';
-import { FooterComponent } from 'components/footer/footer.component';
-import { MenuItemComponent } from 'components/menu-item/menu-item.component';
-import { Category } from 'models/Categories';
-import { MenuItemsService } from 'services/menu.service';
+import { FiltersComponent } from 'src/components/filters/filters.component';
+import { FooterComponent } from 'src/components/footer/footer.component';
+import { MenuItemComponent } from 'src/components/menu-item/menu-item.component';
+import { Category } from 'src/models/Categories';
+import { MenuItemsService } from 'src/services/menu.service';
 import { CarouselComponent } from "../carousel/carousel.component";
-import { FilterService } from 'services/filter.service';
+import { FilterService } from 'src/services/filter.service';
 
 @Component({
   selector: 'haru-landing-page',

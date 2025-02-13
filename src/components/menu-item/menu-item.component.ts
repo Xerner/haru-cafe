@@ -2,9 +2,9 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, computed, input, signal } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
-import { ImageDialogDirective } from 'directives/image-dialog.directive';
-import { Category } from 'models/Categories';
-import { IMenuItem } from 'models/interfaces/IMenuItem';
+import { ImageDialogDirective } from 'src/directives/image-dialog.directive';
+import { Category } from 'src/models/Categories';
+import { IMenuItem } from 'src/models/interfaces/IMenuItem';
 
 @Component({
   selector: 'haru-menu-item',
