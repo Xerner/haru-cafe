@@ -63,18 +63,112 @@
 			HARU SPECIALS & MORE
 		</div>
 	</div>
-	<haru-carousel [slideCount]="2">
+	<haru-carousel #promotionalRef [slideCount]="promotionalRef.sliderRef().nativeElement.childElementCount">
+    <!-- haru promotional video -->
     <div class="keen-slider__slide lg:px-0 px-4">
-      <video class="mx-auto rounded-lg lg:w-[350px] md:w-[300px] w-[200px]" controls muted>
-        <source src="videos/haru-promotion.mp4" type="video/mp4">
+      <video class="mx-auto rounded-lg h-[80vh]" controls poster="images/promos/haru-promo-poster.webp" autoplay muted>
+        <source src="videos/promos/haru-promotion.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
+    <!-- arisen lychee lemonade -->
     <div class="keen-slider__slide lg:px-0 px-4">
-      <img
-        class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border border-cyan-200 object-contain"
-        src="images/haru-cafe-menu-billboard.png"
-        alt="haru-cafe-menu-billboard" />
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/arisen-lychee-lemonade.webp"
+          alt="Arisen Lychee Lemonade" />
+      </div>
+    </div>
+    <!-- dandadan -->
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/moe-moe-sweet-mint-beam.webp"
+          alt="Moe Moe Sweet Mint Beam" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/cursed-turbo-razz-soda.webp"
+          alt="Cursed Turbo Razz Soda" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/strawberry-butterfly-spiral.webp"
+          alt="strawberry Butterfly Spiral" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <video class="mx-auto rounded-lg h-[80vh]" controls poster="images/promos/queen-never-cry-momo-drink-poster.webp" autoplay muted>
+        <source src="videos/promos/moe-moe-sweet-mint-beam-promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- demon slayer -->
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/chocolate-form-flowing-mint-latte.webp"
+          alt="Chocolate form Flowing Mint Latte" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/harmonic-grapeade.webp"
+          alt="Harmonic Grapeade" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/lemonade-type-explosive-razz.webp"
+          alt="Lemonade Type Explosive Razz" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/love-blossom-matcha-latte.webp"
+          alt="Love Blossom Matcha Latte" />
+      </div>
+    </div>
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/mango-flameade.webp"
+          alt="Mango Flameade" />
+      </div>
+    </div>
+    <!-- misc -->
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/its-cold-drink-it.webp"
+          alt="Its Cold, Drink It" />
+      </div>
+    </div>
+    <!-- billboard -->
+    <div class="keen-slider__slide lg:px-0 px-4">
+      <div class="flex items-center h-full">
+        <img
+          class="lg:h-[80vh] w-auto h-auto lg:mx-auto mx-0 rounded-lg border-2 border-cyan-200 object-contain"
+          src="images/promos/haru-cafe-menu-billboard.webp"
+          alt="haru-cafe-menu-billboard" />
+      </div>
     </div>
   </haru-carousel>
 </div>
