@@ -4,6 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 import KeenSlider, { KeenSliderInstance } from 'keen-slider';
 
+export type DotsPosition = 'top' | 'bottom' | 'both' | 'none';
+
 @Component({
   selector: 'haru-carousel',
   imports: [
@@ -15,6 +17,15 @@ import KeenSlider, { KeenSliderInstance } from 'keen-slider';
   templateUrl: './carousel.component.html',
 })
 export class CarouselComponent {
+  //inputs
+  slideCount = input<number | null>(null);
+  dotsPosition = input<DotsPosition>('both');
+  hasArrows = input<boolean>(true);
+  canClickDots = input<boolean>(true);
+  slideInterval = input<number | null>(null);
+  loop = input<boolean>(false);
+  //
+  _interval: NodeJS.Timeout | null = null;
   sliderRef = viewChild.required<ElementRef<HTMLElement>>("sliderRef");
   currentSlide = signal<number>(0);
   dotHelper = computed<number[]>(() => {
@@ -26,11 +37,45 @@ export class CarouselComponent {
   private _dotHelperSize = signal<number>(1);
   slider = signal<KeenSliderInstance | null>(null);
   onSlideChange = output<number>();
-  slideCount = input<number | null>(null);
   lastChildCount = 0;
 
   ngAfterViewInit() {
     this.setSlider();
+    this.setupSlideInterval();
+    this.setupSlideIntervalEvents();
+  }
+
+  private setupSlideIntervalEvents() {
+    var slideInterval = this.slideInterval();
+    if (slideInterval === null) {
+      return;
+    }
+    var sliderRef = this.sliderRef();
+    sliderRef.nativeElement.addEventListener('mouseover', this.clearInterval.bind(this));
+    sliderRef.nativeElement.addEventListener('mouseout', this.setupSlideInterval.bind(this));
+    sliderRef.nativeElement.addEventListener('touchstart', this.clearInterval.bind(this));
+    sliderRef.nativeElement.addEventListener('touchend', this.setupSlideInterval.bind(this));
+  }
+
+  private clearInterval() {
+    if (this._interval !== null) {
+      clearInterval(this._interval);
+      this._interval = null;
+    }
+  }
+
+  private setupSlideInterval() {
+    var slideInterval = this.slideInterval();
+    if (slideInterval === null || this._interval !== null) {
+      return;
+    }
+    this._interval = setInterval(() => {
+      var slider = this.slider();
+      if (slider === null) {
+        return;
+      }
+      slider.next();
+    }, slideInterval);
   }
 
   updateSlider() {
@@ -45,8 +90,11 @@ export class CarouselComponent {
   }
 
   setSlider() {
-    this.lastChildCount = this.sliderRef().nativeElement.childElementCount;
-    var slider = new KeenSlider(this.sliderRef().nativeElement, {
+    this.setNecessarySlideClasses();
+    var sliderRef = this.sliderRef();
+    this.lastChildCount = sliderRef.nativeElement.childElementCount;
+    var slider = new KeenSlider(sliderRef.nativeElement, {
+      loop: this.loop(),
       initial: this.currentSlide(),
       slideChanged: (s) => {
         this.currentSlide.set(s.track.details.rel);
@@ -59,7 +107,25 @@ export class CarouselComponent {
     }
   }
 
+  private setNecessarySlideClasses() {
+    var sliderRef = this.sliderRef();
+    [...sliderRef.nativeElement.children].forEach((child) => {
+      if (child.classList.contains('keen-slider__slide')) {
+        return;
+      }
+      child.classList.add('keen-slider__slide');
+    });
+  }
+
   ngOnDestroy() {
     if (this.slider) this.slider()?.destroy()
+  }
+
+  hasDots(position: DotsPosition) {
+    var currentPosition = this.dotsPosition();
+    if (currentPosition === 'none') {
+      return false;
+    }
+    return currentPosition === position || currentPosition === 'both';
   }
 }
