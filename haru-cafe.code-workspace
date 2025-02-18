@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".",
+      "name": "Root"
+		},
+		{
+			"path": "angular",
+      "name": "Angular Front-end"
+		},
+		{
+			"path": "haru_cafe_django",
+      "name": "Django Back-end"
+		}
+	],
+  "settings": {
+    "python-envs.pythonProjects": []
+  }
+}
