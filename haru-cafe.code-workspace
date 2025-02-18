@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "angular"
+		},
+		{
+			"path": "haru_cafe_django"
+		}
+	],
+  "settings": {}
+}
