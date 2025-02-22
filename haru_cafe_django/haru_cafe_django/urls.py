@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from haru_cms import views
+from haru_cms import views as cms_views
+from haru_seeder import views as seeder_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/<str:message>', views.menu_items, name='api'),
+    path('api/seeder/', include('haru_seeder.urls')),
+    path('api/<str:message>', cms_views.menu_items),
 ]

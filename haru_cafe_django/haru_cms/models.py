@@ -20,7 +20,6 @@ class MenuItemCategory(BaseModel, models.Model):
   def __str__(self):
     return self.name
 
-
 class MenuItem(BaseModel, models.Model):
   name = models.CharField(max_length=256)
   image = models.ImageField(upload_to="haru_cms/images", blank=True, null=True)
