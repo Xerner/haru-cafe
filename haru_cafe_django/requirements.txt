@@ -2,3 +2,4 @@ djangorestframework
 pillow
 psycopg
 drf-spectacular
+thefuzz
