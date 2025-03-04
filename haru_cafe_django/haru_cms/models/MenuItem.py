@@ -1,8 +1,11 @@
+import os
 from django.db import models
+
+MENU_ITEMS_DIR = os.path.join('images', 'menu-items')
 
 class MenuItem(models.Model):
   name = models.CharField(max_length=256)
-  image = models.ImageField(upload_to="haru_cms/images", blank=True, null=True)
+  image = models.ImageField(upload_to=MENU_ITEMS_DIR, blank=True, null=True)
   description = models.CharField(max_length=1024, blank=True, null=True)
   price = models.DecimalField(max_digits=10, decimal_places=2)
   categories = models.ManyToManyField('MenuItemCategory')

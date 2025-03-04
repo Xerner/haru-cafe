@@ -1,6 +1,7 @@
-from .views import seed_json
+from .views import seed_menu_item_json, seed_image_urls
 from django.urls import path
 
 urlpatterns = [
-  path('seed-json', seed_json),
+  path('seed-menu-item-json', seed_menu_item_json),
+  path('seed-image-urls', seed_image_urls),
 ]

@@ -1,17 +1,7 @@
-from typing import List
+import json
 from decimal import Decimal, getcontext
 from haru_cms.models import MenuItemSize, MenuItemCategory, MenuItem
-import json
-
-class MenuItemRawJson:
-  name: str
-  # image: str
-  description: str | None = None
-  price: float = 0.00
-  categories: List[str] = []
-  isFavorite: bool = False
-  isActive: bool = True
-  size: str | None = None
+from haru_seeder.models import MenuItemRawJson
 
 
 class MenuItemRawJsonSeeder:
@@ -35,6 +25,7 @@ class MenuItemRawJsonSeeder:
     raw = MenuItemRawJson()
     raw.name=menu_item.get('name')
     raw.description=menu_item.get('description')
+    raw.image=menu_item.get('image')
     raw.price=0.0 if menu_item.get('price') is None else menu_item.get('price')
     raw.categories=[] if menu_item.get('categories') is None else menu_item.get('categories')
     raw.isFavorite=False if menu_item.get('isFavorite') is None else menu_item.get('isFavorite')

@@ -10,7 +10,7 @@
     "name": "Grapefruit Juice",
     "description": "A tangy and refreshing drink made from fresh grapefruit.",
     "price": 6.50,
-    "imageUrl": "images/menu-items/grapefruit-juice.webp",
+    "image": "images/menu-items/grapefruit-juice.webp",
     "categories": ["Drink", "Juice", "Cold", "Single Flavor"],
     "size": "20oz"
   },
@@ -23,7 +23,7 @@
   },
   {
     "name": "Orange Juice",
-    "imageUrl": "images/menu-items/orange-juice.webp",
+    "image": "images/menu-items/orange-juice.webp",
     "description": "A classic breakfast drink made from fresh oranges.",
     "price": 6.50,
     "categories": ["Drink", "Juice", "Cold", "Single Flavor"],
@@ -31,7 +31,7 @@
   },
   {
     "name": "Berry Lover Juice",
-    "imageUrl": "images/menu-items/berry-lover-juice.webp",
+    "image": "images/menu-items/berry-lover-juice.webp",
     "description": "A delicious blend of strawberries, blackberries, and raspberries.",
     "price": 7.90,
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
@@ -47,7 +47,7 @@
   },
   {
     "name": "Strawberry + Kiwi Juice",
-    "imageUrl": "images/menu-items/strawberry-kiwi-juice.webp",
+    "image": "images/menu-items/strawberry-kiwi-juice.webp",
     "description": "A sweet and tangy blend of strawberries and kiwis.",
     "price": 6.90,
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
@@ -57,7 +57,7 @@
     "name": "Strawberry + Banana Juice",
     "description": "A creamy and fruity blend of strawberries and bananas.",
     "price": 6.50,
-    "imageUrl": "images/menu-items/strawberry-banana-juice.webp",
+    "image": "images/menu-items/strawberry-banana-juice.webp",
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
     "size": "20oz"
   },
@@ -65,13 +65,13 @@
     "name": "Kiwi + Banana Juice",
     "description": "A tropical blend of kiwis and bananas.",
     "price": 6.90,
-    "imageUrl": "images/menu-items/banana-kiwi-juice.webp",
+    "image": "images/menu-items/banana-kiwi-juice.webp",
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
     "size": "20oz"
   },
   {
     "name": "Orange + Pineapple Juice",
-    "imageUrl": "images/menu-items/orange-pineapple-juice.webp",
+    "image": "images/menu-items/orange-pineapple-juice.webp",
     "description": "A tropical blend of oranges and pineapples",
     "price": 6.90,
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
@@ -81,27 +81,27 @@
     "name": "Orange + Grapefruit Juice",
     "description": "A tangy and refreshing blend of oranges and grapefruit.",
     "price": 6.90,
-    "imageUrl": "images/menu-items/orange-grapefruit-juice.webp",
+    "image": "images/menu-items/orange-grapefruit-juice.webp",
     "categories": ["Drink", "Juice", "Cold", "Mixed Flavor"],
     "size": "20oz"
   },
   {
     "name": "Ham & Egg Sandwich",
-    "imageUrl": "images/menu-items/ham-egg-sandwich.webp",
+    "image": "images/menu-items/ham-egg-sandwich.webp",
     "description": "Ham, boiled egg, american cheese, lettuce, and tomato with homemade sandwich sauce",
     "price": 9.00,
     "categories": ["Food", "Sandwich"]
   },
   {
     "name": "Chicken Sandwich",
-    "imageUrl": "images/menu-items/chicken-sandwich.webp",
+    "image": "images/menu-items/chicken-sandwich.webp",
     "description": "Grilled chicken, american cheese, lettuce, and tomato with chili and homemade sandwich sauce",
     "price": 9.50,
     "categories": ["Food", "Sandwich"]
   },
   {
     "name": "Spicy Tuna Sandwich",
-    "imageUrl": "images/menu-items/spicy-tuna-sandwich.webp",
+    "image": "images/menu-items/spicy-tuna-sandwich.webp",
     "description": "Tuna, jalapeno onion, lettuce, and tomatoes",
     "price": 9.00,
     "categories": ["Food", "Sandwich"]
@@ -114,7 +114,7 @@
   },
   {
     "name": "Shrimp Guacamole Sandwich",
-    "imageUrl": "images/menu-items/shrimp-guacamole-sandwich.webp",
+    "image": "images/menu-items/shrimp-guacamole-sandwich.webp",
     "description": "Shrimp, guacamole, and chickpea mayo",
     "price": 10.50,
     "categories": ["Food", "Sandwich"]
@@ -128,7 +128,7 @@
   },
   {
     "name": "Margherita Pizza",
-    "imageUrl": "images/menu-items/7-in-margherita-pizza.webp",
+    "image": "images/menu-items/7-in-margherita-pizza.webp",
     "description": "Pita bread, spinach, tomato, honey, and mozzarella cheese",
     "price": 7.90,
     "categories": ["Food", "Mini Pizza"],
@@ -143,7 +143,7 @@
   },
   {
     "name": "Jeju Pizza",
-    "imageUrl": "images/menu-items/7-in-jeju-pizza.webp",
+    "image": "images/menu-items/7-in-jeju-pizza.webp",
     "description": "Pita bread, ham, pineapple, mandarin orange, jalapeno, and mozarrella cheese",
     "price": 8.90,
     "categories": ["Food", "Mini Pizza"],
@@ -153,7 +153,7 @@
     "name": "Sweet Potato Mousse Pizza",
     "description": "Thin pita bread, bacon, corn, sweet potato mousse, and mozarrella cheese",
     "price": 10.50,
-    "imageUrl": "images/menu-items/9-in-sweet-potato-mouse-pizza.webp",
+    "image": "images/menu-items/9-in-sweet-potato-mouse-pizza.webp",
     "categories": ["Food", "Mini Pizza"],
     "isFavorite": true,
     "size": "9\""
@@ -165,28 +165,28 @@
   },
   {
     "name": "Honey Butter Croissant",
-    "imageUrl": "images/menu-items/honey-butter-croissant.webp",
+    "image": "images/menu-items/honey-butter-croissant.webp",
     "description": "Butter, honey, strawberry, and whipping cream", 
     "price": 5.50,
     "categories": ["Food", "Bakery"]
   },
   {
     "name": "Honey Bread",
-    "imageUrl": "images/menu-items/honey-bread.webp",
+    "image": "images/menu-items/honey-bread.webp",
     "description": "Bread, butter, whipping cream, strawberry, blueberry, and honey", 
     "price": 5.50,
     "categories": ["Food", "Bakery"]
   },
   {
     "name": "K - Garlic Bread",
-    "imageUrl": "images/menu-items/k-garlic-bread.webp",
+    "image": "images/menu-items/k-garlic-bread.webp",
     "description": "Butter, minced garlic, sugar, condensed milk, and parsley", 
     "price": 4.90,
     "categories": ["Food", "Bakery"]
   },
   {
     "name": "Potato Blanket Toast",
-    "imageUrl": "images/menu-items/potato-blanket.webp",
+    "image": "images/menu-items/potato-blanket.webp",
     "description": "", 
     "price": 5.90,
     "categories": ["Food", "Bakery"],
@@ -196,27 +196,27 @@
     "name": "Sausage In Garlic Bread",
     "description": " Chicken sausage inside homemade garlic bread with american cheese", 
     "price": 5.90,
-    "imageUrl": "images/menu-items/sausage-in-garlic-bread.webp",
+    "image": "images/menu-items/sausage-in-garlic-bread.webp",
     "categories": ["Food", "Bakery"],
     "isFavorite": true
   },
   {
     "name": "Glazed Banana",
-    "imageUrl": "images/menu-items/glazed-banana.webp",
+    "image": "images/menu-items/glazed-banana.webp",
     "price": 4.50,
     "categories": ["Food", "Snack"],
     "isActive": false
   },
   {
     "name": "K - Corn Dog",
-    "imageUrl": "images/menu-items/k-corn-dog.webp",
+    "image": "images/menu-items/k-corn-dog.webp",
     "description": "Chicken sausage fried in corn dog batter with ketchup and mustard",
     "price": 5.50,
     "categories": ["Food", "Snack"]
   },
   {
     "name": "Strawberry Mochi",
-    "imageUrl": "images/menu-items/strawberry-mochi.webp",
+    "image": "images/menu-items/strawberry-mochi.webp",
     "description": "Mochi, red bean paste, and strawberry",
     "price": 6.50,
     "categories": ["Food", "Snack"]
@@ -225,7 +225,7 @@
     "name": "Strawberry Flavored Mochi Ice Cream",
     "description": "Strawberry ice cream inside mochi with strawberry slices, and a chocolate drizzle.",
     "price": 3.90,
-    "imageUrl": "images/menu-items/strawberry-flavored-mochi-ice-cream.webp",
+    "image": "images/menu-items/strawberry-flavored-mochi-ice-cream.webp",
     "categories": ["Food", "Snack"]
   },
   {
@@ -237,7 +237,7 @@
   {
     "name": "Fresh Fruit Cream Sandwich",
     "description": "Soft bread filled with fluffy whipped cream, sweet strawberries, and juicy kiwi slices.",
-    "imageUrl": "images/menu-items/fresh-fruit-cream-sandwich.webp",
+    "image": "images/menu-items/fresh-fruit-cream-sandwich.webp",
     "price": 5.90,
     "categories": ["Food", "Snack", "Sandwich"]
   },
@@ -252,7 +252,7 @@
     "name": "K - Coffee",
     "description": "Sweet Korean mixed coffee",
     "price": 3.50,
-    "imageUrl": "images/menu-items/k-coffee.webp",
+    "image": "images/menu-items/k-coffee.webp",
     "categories": ["Drink", "Hot", "Coffee"],
     "size": "10oz"
   },
@@ -281,7 +281,7 @@
     "name": "Cloud Latte",
     "description": "Sweet Korean mixed coffee with steamed milk and a cloud of whipped steamed milk on top",
     "price": 6.00,
-    "imageUrl": "images/menu-items/cloud-latte.webp",
+    "image": "images/menu-items/cloud-latte.webp",
     "categories": ["Drink", "Hot", "Coffee"],
     "size": "16oz"
   },
@@ -294,7 +294,7 @@
   },
   {
     "name": "Haru Signature Latte",
-    "imageUrl": "images/menu-items/haru-signature-latte.webp",
+    "image": "images/menu-items/haru-signature-latte.webp",
     "description": "2 shots of expresso with steamed milk and homemade orange syrup",
     "price": 6.50,
     "categories": ["Drink", "Hot", "Coffee"],
@@ -305,7 +305,7 @@
     "name": "Expresso",
     "description": "2 shots of expresso",
     "price": 3.00,
-    "imageUrl": "images/menu-items/expresso.webp",
+    "image": "images/menu-items/expresso.webp",
     "categories": ["Drink", "Hot", "Coffee"],
     "size": "16oz"
   },
@@ -369,7 +369,7 @@
     "name": "Iced Blue Ocean Latte",
     "description": "2 shots of expresso with milk, condensed milk, blue curacao syrup, and a homemade heavy cream mix over ice",
     "price": 6.90,
-    "imageUrl": "images/menu-items/iced-blue-ocean-latte.webp",
+    "image": "images/menu-items/iced-blue-ocean-latte.webp",
     "categories": ["Drink", "Cold", "Coffee"],
     "size": "20oz"
   },
@@ -405,7 +405,7 @@
   {
     "name": "Peach Iced Tea",
     "price": 5.00,
-    "imageUrl": "images/menu-items/peach-iced-tea.webp",
+    "image": "images/menu-items/peach-iced-tea.webp",
     "categories": ["Drink", "Cold", "NonCoffee"],
     "size": "20oz"
   },
@@ -413,7 +413,7 @@
     "name": "Iced Choco Latte",
     "description": "Homemade chocolate syrup with milk, whipped cream, and a chocolate drizzle on top",
     "price": 6.00,
-    "imageUrl": "images/menu-items/iced-choco-latte.webp",
+    "image": "images/menu-items/iced-choco-latte.webp",
     "categories": ["Drink", "Cold", "NonCoffee"],
     "size": "20oz"
   },
@@ -421,7 +421,7 @@
     "name": "Iced Strawberry Latte",
     "description": "Homemade strawberry syrup with milk, and a whole strawberry on top",
     "price": 6.50,
-    "imageUrl": "images/menu-items/strawberry-latte.webp",
+    "image": "images/menu-items/strawberry-latte.webp",
     "categories": ["Drink", "Cold", "NonCoffee"],
     "size": "20oz"
   },
@@ -444,14 +444,14 @@
     "name": "Iced Choco Strawberry Delight",
     "description": "Strawberry milk, whipped chocolate heavy cream, topped with regular whipped cream and sprinkles",
     "price": 7.50,
-    "imageUrl": "images/menu-items/choco-strawberry-delight.webp",
+    "image": "images/menu-items/choco-strawberry-delight.webp",
     "categories": ["Drink", "Cold", "NonCoffee"],
     "isFavorite": true,
     "size": "20oz"
   },
   {
     "name": "Blood Lemonade",
-    "imageUrl": "images/menu-items/blood-lemonade.webp",
+    "image": "images/menu-items/blood-lemonade.webp",
     "description": "Homemade lemon syrup with sparkling water, and blood orange syrup",
     "price": 5.00,
     "categories": ["Drink", "Cold", "Ade"],
@@ -459,7 +459,7 @@
   },
   {
     "name": "Aurora Lemonade",
-    "imageUrl": "images/menu-items/aurora-lemonade.webp",
+    "image": "images/menu-items/aurora-lemonade.webp",
     "description": "Homemade lemon syrup with sparkling water, blue curacao syrup, and butterfly pea powder water",
     "price": 5.90,
     "categories": ["Drink", "Cold", "Ade"],
@@ -468,7 +468,7 @@
   },
   {
     "name": "Twilight Blueberry-ade",
-    "imageUrl": "images/menu-items/twilight-blueberry-ade.webp",
+    "image": "images/menu-items/twilight-blueberry-ade.webp",
     "description": "Homemade blueberry syrup with sparkling water, blue curacao syrup, and butterfly pea powder water",
     "price": 5.90,
     "categories": ["Drink", "Cold", "Ade"],
@@ -478,7 +478,7 @@
     "name": "Berry Lemonade",
     "description": "Homemade strawberry and lemon syrup, sparkling water, and lemon slices",
     "price": 6.50,
-    "imageUrl": "images/menu-items/berry-lemonade.webp",
+    "image": "images/menu-items/berry-lemonade.webp",
     "categories": ["Drink", "Cold", "Ade"],
     "size": "20oz"
   },
@@ -486,7 +486,7 @@
     "name": "Peach Lemon Tea",
     "description": "Peach iced tea with lemonade",
     "price": 5.50,
-    "imageUrl": "images/menu-items/peach-lemon-tea.webp",
+    "image": "images/menu-items/peach-lemon-tea.webp",
     "categories": ["Drink", "Cold", "Ade"],
     "size": "20oz"
   },
@@ -494,7 +494,7 @@
     "name": "Iced Spring Latte",
     "description": "Homemade strawberry milk, butterfly pea powder milk, and homemade whipped heavy cream mix",
     "price": 6.90,
-    "imageUrl": "images/menu-items/spring-latte.webp",
+    "image": "images/menu-items/spring-latte.webp",
     "categories": ["Drink", "Cold", "Coffee", "Seasonal", "Specials"],
     "size": "20oz"
   },
@@ -502,7 +502,7 @@
     "name": "Summer Red Sparkling",
     "description": "Cubed watermelon, Sprite, and blood orange syrup",
     "price": 6.90,
-    "imageUrl": "images/menu-items/summer-sparkling.webp",
+    "image": "images/menu-items/summer-sparkling.webp",
     "categories": ["Drink", "Seasonal", "Cold", "Specials"],
     "size": "20oz"
   },
@@ -510,7 +510,7 @@
     "name": "Fall Pumpkin Spice Latte",
     "description": "2 shots of expresso, steamed milk, cinnamon powder, pumpkin powder, and topped with whipped cream and more cinnamon powder",
     "price": 6.50,
-    "imageUrl": "images/menu-items/fall-pumpkin-spice-latte.webp",
+    "image": "images/menu-items/fall-pumpkin-spice-latte.webp",
     "categories": ["Drink", "Hot", "Coffee", "Seasonal", "Specials"],
     "size": "16oz"
   },
@@ -518,7 +518,7 @@
     "name": "Iced Fall Pumpkin Spice Latte",
     "description": "2 shots of expresso, milk, pumpkin powder, cinnamon powder, and topped with whipped cream and more cinnamon powder",
     "price": 7.00,
-    "imageUrl": "images/menu-items/iced-fall-pumpkin-spice-latte.webp",
+    "image": "images/menu-items/iced-fall-pumpkin-spice-latte.webp",
     "categories": ["Drink", "Cold", "Coffee", "Seasonal", "Specials"],
     "size": "20oz"
   },
@@ -526,7 +526,7 @@
     "name": "Winter Hot Chocolate",
     "description": "Homemade chocolate syrup, steamed milk, topped with one marshmallow and chocolate powder",
     "price": 5.00,
-    "imageUrl": "images/menu-items/winter-hot-chocolate.webp",
+    "image": "images/menu-items/winter-hot-chocolate.webp",
     "categories": ["Drink", "Hot", "NonCoffee", "Seasonal", "Specials"],
     "size": "20oz"
   },
@@ -562,7 +562,7 @@
     "name": "Chocolate Form: Flowing Mint Latte",
     "description": "Inspired by Tanjiro from Demon Slayer. Chocolate syrup, mint syrup, milk, and whipped cream with sprinkles",
     "price": 7.00,
-    "imageUrl": "images/menu-items/chocolate-form-flowing-mint-latte.webp",
+    "image": "images/menu-items/chocolate-form-flowing-mint-latte.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -570,7 +570,7 @@
     "name": "Sweet Demon Latte",
     "description": "Inspired by Nezuko from Demon Slayer. Chocolate syrup, strawberry syrup, milk, and whipped cream with sprinkles",
     "price": 7.00,
-    "imageUrl": "images/menu-items/sweet-demon-latte.webp",
+    "image": "images/menu-items/sweet-demon-latte.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -578,7 +578,7 @@
     "name": "Love Blossom Matcha Latte",
     "description": "Inspired by Mitsuri from Demon Slayer. Strawberry syrup, milk, matcha powder, and a whole strawberry",
     "price": 7.00,
-    "imageUrl": "images/menu-items/love-blossom-matcha-latte.webp",
+    "image": "images/menu-items/love-blossom-matcha-latte.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -586,7 +586,7 @@
     "name": "Mango Flameade",
     "description": "Inspired by Rengoku from Demon Slayer. Mango syrup, blood orange syrup, Sprite, and a slice of orange",
     "price": 6.00,
-    "imageUrl": "images/menu-items/mango-flameade.webp",
+    "image": "images/menu-items/mango-flameade.webp",
     "categories": ["Drink", "Cold", "Ade", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -594,7 +594,7 @@
     "name": "Harmonic Grapeade",
     "description": "Inspired by Tengen from Demon Slayer. Grape syrup, Sprite, and a slice of kiwi",
     "price": 5.50,
-    "imageUrl": "images/menu-items/harmonic-grapeade.webp",
+    "image": "images/menu-items/harmonic-grapeade.webp",
     "categories": ["Drink", "Cold", "Ade", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -602,7 +602,7 @@
     "name": "Lemonade Type: Explosive Razz",
     "description": "Inspired by Akaza from Demon Slayer. Raspberry syrup, lemon syrup, blue curacao syrup, Sprite, and a slice of lemon",
     "price": 6.00,
-    "imageUrl": "images/menu-items/lemonade-type-explosive-razz.webp",
+    "image": "images/menu-items/lemonade-type-explosive-razz.webp",
     "categories": ["Drink", "Cold", "Ade", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -610,7 +610,7 @@
     "name": "Moe Moe Sweet Mint Beam",
     "description": "Inspired By Momo from Dandadan. Strawberry syrup, milk, mint syrup, whipped heavy cream, and a whole strawberry",
     "price": 6.50,
-    "imageUrl": "images/menu-items/moe-moe-sweet-mint-beam.webp",
+    "image": "images/menu-items/moe-moe-sweet-mint-beam.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -618,7 +618,7 @@
     "name": "Cursed Turbo Razz Soda",
     "description": "Inspired By Okarun from Dandadan. Raspberry syrup, blue curacao syrup, blood orange syrup, Sprite, whipped cream, with a raspberry topping",
     "price": 7.00,
-    "imageUrl": "images/menu-items/cursed-turbo-razz-soda.webp",
+    "image": "images/menu-items/cursed-turbo-razz-soda.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -626,7 +626,7 @@
     "name": "Strawberry Butterfly Spiral",
     "description": "Inspired By Aira from Dandadan. Strawberry syrup, Sprite, butterfly pea powder, water, and a whole strawberry",
     "price": 6.00,
-    "imageUrl": "images/menu-items/strawberry-butterfly-spiral.webp",
+    "image": "images/menu-items/strawberry-butterfly-spiral.webp",
     "categories": ["Drink", "Cold", "NonCoffee", "Anime", "Specials"],
     "size": "20oz"
   },
@@ -634,7 +634,7 @@
     "name": "Arisen Lychee Lemonade",
     "description": "Inspired By Jin Woo from Solo Leveling. Lychee syrup, lemon syrup, blue curacao syrup, blood orange syrup, Sprite, and a slice of lemon",
     "price": 6.00,
-    "imageUrl": "images/menu-items/arisen-lychee-lemonade.webp",
+    "image": "images/menu-items/arisen-lychee-lemonade.webp",
     "categories": ["Drink", "Cold", "Ade", "Anime", "Specials"],
     "size": "20oz"
   }

@@ -10,26 +10,19 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-import os
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+from . import env
+from . import paths
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#gnlrdry!dfwewl5s34dr7#t$x$hcyc!_0or7w=ud++@6fj1gw'
+SECRET_KEY = env.DJANGO_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-  'localhost',
-]
-
+ALLOWED_HOSTS = env.ALLOWED_HOSTS
 
 # Application definition
 
@@ -82,11 +75,11 @@ WSGI_APPLICATION = 'haru_cafe_django.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB"),
-        "USER": os.environ.get("POSTGRES_USER"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
-        "HOST": os.environ.get("POSTGRES_HOST"),
-        "PORT": os.environ.get("POSTGRES_PORT"),
+        "NAME": env.POSTGRES_DB,
+        "USER": env.POSTGRES_USER,
+        "PASSWORD": env.POSTGRES_PASSWORD,
+        "HOST": env.POSTGRES_HOST,
+        "PORT": env.POSTGRES_PORT,
     }
 }
 
@@ -95,6 +88,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 LOGIN_URL = '/admin/login/'
+MEDIA_ROOT = paths.MEDIA_ROOT
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -145,6 +139,6 @@ SPECTACULAR_SETTINGS = {
   'VERSION': '1.0.0',
   'SERVE_INCLUDE_SCHEMA': False,
   "SERVERS": [
-    {"url": "http://localhost:8000"}
+    { "url": env.BACKEND_URL }
   ],
 }
