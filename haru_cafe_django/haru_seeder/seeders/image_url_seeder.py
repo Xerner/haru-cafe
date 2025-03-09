@@ -19,7 +19,8 @@ class ImageUrlSeeder:
     return_str = []
     
     menu_items: QuerySet = MenuItem.objects.all()
-    self.seed_images(images_dir, menu_items, lambda menu_item: return_str.append(f"Seeded image for {menu_item.name} with {images_dir}/{menu_item.image}"))
+    callback = self._on_image_seeded_callback()
+    self.seed_images(images_dir, menu_items, callback)
     print("Seeding complete for image urls")
     return '\n'.join(return_str)
   
@@ -53,4 +54,9 @@ class ImageUrlSeeder:
     return fuzz.ratio(image_name, menu_item.name) > FUZZ_RATIO_SCORE_THRESHOLD \
       or fuzz.token_set_ratio(image_name, menu_item.name) > FUZZ_TOKEN_SET_RATIO_SCORE_THRESHOLD \
       or fuzz.token_sort_ratio(image_name, menu_item.name) > FUZZ_TOKEN_SORT_RATIO_SCORE_THRESHOLD
-    
+  
+  def _on_image_seeded_callback(self, images_dir: str, return_str: List[str]) -> Callable[[MenuItem, bool], None]:
+    def on_image_seeded(menu_item: MenuItem, is_seeded: bool):
+      if is_seeded:
+        return_str.append(f"Seeded image for {menu_item.name} with {images_dir}/{menu_item.image}")
+    return on_image_seeded

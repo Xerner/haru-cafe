@@ -440,6 +440,28 @@ paths:
       responses:
         '204':
           description: No response body
+  /api/seed/seed_image_urls/:
+    get:
+      operationId: api_seed_seed_image_urls_retrieve
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/seed/seed_menu_item_json/:
+    get:
+      operationId: api_seed_seed_menu_item_json_retrieve
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
 components:
   schemas:
     MenuItem:

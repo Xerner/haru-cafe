@@ -1,7 +1,6 @@
-from .views import seed_menu_item_json, seed_image_urls
-from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import SeederViewSet
 
-urlpatterns = [
-  path('seed-menu-item-json', seed_menu_item_json),
-  path('seed-image-urls', seed_image_urls),
-]
+router = DefaultRouter()
+router.register('seed', SeederViewSet, basename='seed')
+urlpatterns = router.urls
