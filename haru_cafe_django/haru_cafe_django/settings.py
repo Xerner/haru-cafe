@@ -22,6 +22,7 @@ SECRET_KEY = env.DJANGO_SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+print('Allowed Hosts: ', env.ALLOWED_HOSTS)
 ALLOWED_HOSTS = env.ALLOWED_HOSTS
 
 # Application definition
@@ -34,6 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'haru_cms',
+    'haru_debug',
+    'haru_seeder',
     'rest_framework',
     'drf_spectacular',
 ]
@@ -139,6 +142,7 @@ SPECTACULAR_SETTINGS = {
   'VERSION': '1.0.0',
   'SERVE_INCLUDE_SCHEMA': False,
   "SERVERS": [
-    { "url": env.BACKEND_URL }
+    { "url": env.BACKEND_URL },
+    { "url": "http://host.docker.internal:8000" },
   ],
 }

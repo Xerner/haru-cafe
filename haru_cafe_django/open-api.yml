@@ -440,6 +440,29 @@ paths:
       responses:
         '204':
           description: No response body
+  /api/debug/auth/ping/:
+    get:
+      operationId: api_debug_auth_ping_retrieve
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      responses:
+        '200':
+          description: No response body
+  /api/debug/ping/:
+    get:
+      operationId: api_debug_ping_retrieve
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
   /api/seed/seed_image_urls/:
     get:
       operationId: api_seed_seed_image_urls_retrieve
@@ -587,3 +610,4 @@ components:
       name: sessionid
 servers:
 - url: http://localhost:8000
+- url: http://host.docker.internal:8000
