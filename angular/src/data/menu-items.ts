@@ -178,6 +178,8 @@ export const MENU_ITEMS: IMenuItem[] = [
   {
     name: "Chocolate Muffin", 
     price: 1.90,
+    imageUrl: "images/menu-items/chocolate-muffin.webp",
+    description: "A hot, gooey chocolate muffin with chocolate chips",
     categories: [Category.Food, Category.Bakery],
   },
   {
