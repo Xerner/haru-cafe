@@ -31,8 +31,4 @@ export const CATEGORY_GRAPH: ICategoryNode[] = [
       category: Category.Cold,
       childCategories: [Category.Coffee, Category.NonCoffee, Category.Ade, Category.Juice],
     },
-    {
-      category: Category.Juice,
-      childCategories: [Category.SingleFlavor, Category.MixedFlavor],
-    },
-  ]
+]

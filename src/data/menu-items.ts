@@ -3,94 +3,13 @@ import { IMenuItem } from "src/models/interfaces/IMenuItem";
 import { Size } from "src/models/Size";
 
 export const MENU_ITEMS: IMenuItem[] = [
-  //#region single flavor juices
+  //#region juice
   {
-    name: "Watermelon Juice",
-    description: "A refreshing drink made from fresh watermelon.",
-    price: 7.00,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.SingleFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Grapefruit Juice",
-    description: "A tangy and refreshing drink made from fresh grapefruit.",
-    price: 6.50,
-    imageUrl: "images/menu-items/grapefruit-juice.webp",
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.SingleFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Mango Juice",
-    description: "A sweet and tropical drink made from fresh mangoes.",
-    price: 7.00,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.SingleFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Orange Juice",
-    imageUrl: "images/menu-items/orange-juice.webp",
-    description: "A classic breakfast drink made from fresh oranges.",
-    price: 6.50,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.SingleFlavor],
-    size: Size["20oz"],
-  },
-  //#endregion
-  
-  //#region mixed flavor juices
-  {
-    name: "Berry Lover Juice",
+    name: "Build Your Own Juice",
     imageUrl: "images/menu-items/berry-lover-juice.webp",
-    description: "A delicious blend of strawberries, blackberries, and raspberries.",
-    price: 7.90,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    isFavorite: true,
-    size: Size["20oz"],
-  },
-  {
-    name: "Watermelon + Pineapple Juice",
-    description: "A tropical blend of watermelon and pineapple juices.",
-    price: 7.50,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Strawberry + Kiwi Juice",
-    imageUrl: "images/menu-items/strawberry-kiwi-juice.webp",
-    description: "A sweet and tangy blend of strawberries and kiwis.",
+    description: "A refreshing drink made from fresh fruits.",
     price: 6.90,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Strawberry + Banana Juice",
-    description: "A creamy and fruity blend of strawberries and bananas.",
-    price: 6.50,
-    imageUrl: "images/menu-items/strawberry-banana-juice.webp",
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Kiwi + Banana Juice",
-    description: "A tropical blend of kiwis and bananas.",
-    price: 6.90,
-    imageUrl: "images/menu-items/banana-kiwi-juice.webp",
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Orange + Pineapple Juice",
-    imageUrl: "images/menu-items/orange-pineapple-juice.webp",
-    description: "A tropical blend of oranges and pineapples",
-    price: 6.90,
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
-    size: Size["20oz"],
-  },
-  {
-    name: "Orange + Grapefruit Juice",
-    description: "A tangy and refreshing blend of oranges and grapefruit.",
-    price: 6.90,
-    imageUrl: "images/menu-items/orange-grapefruit-juice.webp",
-    categories: [Category.Drink, Category.Juice, Category.Cold, Category.MixedFlavor],
+    categories: [Category.Drink, Category.Juice, Category.Cold],
     size: Size["20oz"],
   },
   //#endregion
@@ -152,14 +71,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Pepperoni Pizza",
     description: "Pita bread, pizza sauce, pepperoni, and mozzarella cheese",
     price: 7.90,
-    categories: [Category.Food, Category.MiniPizza],
-    size: Size["7\""],
-  },
-  {
-    name: "Jeju Pizza",
-    imageUrl: "images/menu-items/7-in-jeju-pizza.webp",
-    description: "Pita bread, ham, pineapple, mandarin orange, jalapeno, and mozarrella cheese",
-    price: 8.90,
     categories: [Category.Food, Category.MiniPizza],
     size: Size["7\""],
   },
@@ -236,26 +147,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     categories: [Category.Food, Category.Snack],
   },
   {
-    name: "Strawberry Mochi",
-    imageUrl: "images/menu-items/strawberry-mochi.webp",
-    description: "Mochi, red bean paste, and strawberry",
-    price: 6.50,
-    categories: [Category.Food, Category.Snack],
-  },
-  {
-    name: "Strawberry Flavored Mochi Ice Cream",
-    description: "Strawberry ice cream inside mochi with strawberry slices, and a chocolate drizzle.",
-    price: 3.90,
-    imageUrl: "images/menu-items/strawberry-flavored-mochi-ice-cream.webp",
-    categories: [Category.Food, Category.Snack],
-  },
-  {
-    name: "Green Tea Flavored Mochi Ice Cream",
-    description: "Green tea ice cream inside mochi with kiwi slices, and a chocolate drizzle.",
-    price: 3.90,
-    categories: [Category.Food, Category.Snack],
-  },
-  {
     name: "Fresh Fruit Cream Sandwich",
     description: "Soft bread filled with fluffy whipped cream, sweet strawberries, and juicy kiwi slices.",
     imageUrl: "images/menu-items/fresh-fruit-cream-sandwich.webp",
@@ -271,14 +162,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     price: 3.50,
     categories: [Category.Drink, Category.Hot, Category.Coffee],
     size: Size["16oz"],
-  },
-  {
-    name: "K - Coffee",
-    description: "Sweet Korean mixed coffee",
-    price: 3.50,
-    imageUrl: "images/menu-items/k-coffee.webp",
-    categories: [Category.Drink, Category.Hot, Category.Coffee],
-    size: Size["10oz"],
   },
   {
     name: "Vanilla Latte",
@@ -356,13 +239,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     price: 4.00,
     categories: [Category.Drink, Category.Cold, Category.Coffee],
     size: Size["20oz"],
-  },
-  {
-    name: "Iced K - Coffee",
-    description: "Sweet Korean mixed coffee over ice",
-    price: 4.00,
-    categories: [Category.Drink, Category.Cold, Category.Coffee],
-    size: Size["16oz"],
   },
   {
     name: "Iced Vanilla Latte",
@@ -503,14 +379,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     size: Size["20oz"],
   },
   {
-    name: "Twilight Blueberry-ade",
-    imageUrl: "images/menu-items/twilight-blueberry-ade.webp",
-    description: "Homemade blueberry syrup with sparkling water, blue curacao syrup, and butterfly pea powder water",
-    price: 5.90,
-    categories: [Category.Drink, Category.Cold, Category.Ade],
-    size: Size["20oz"],
-  },
-  {
     name: "Berry Lemonade",
     description: "Homemade strawberry and lemon syrup, sparkling water, and lemon slices",
     price: 6.50,
@@ -590,13 +458,6 @@ export const MENU_ITEMS: IMenuItem[] = [
     name: "Ginger Tea",
     description: "Ginger tea with honey",
     price: 4.50,
-    categories: [Category.Drink, Category.Hot, Category.Tea],
-    size: Size["16oz"],
-  },
-  {
-    name: "Jujube Tea",
-    description: "Jujube tea with honey. Jujube is a red date from Korea.",
-    price: 4.90,
     categories: [Category.Drink, Category.Hot, Category.Tea],
     size: Size["16oz"],
   },
