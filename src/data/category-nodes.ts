@@ -16,12 +16,8 @@ export const CATEGORY_GRAPH: ICategoryNode[] = [
       childCategories: [Category.Sandwich, Category.MiniPizza, Category.Bakery, Category.Snack],
     },
     {
-      category: Category.Specials,
-      childCategories: [Category.Seasonal, Category.Anime],
-    },
-    {
       category: Category.Drink,
-      childCategories: [Category.Hot, Category.Cold, Category.Specials],
+      childCategories: [Category.Hot, Category.Cold, Category.Seasonal],
     },
     {
       category: Category.Hot,

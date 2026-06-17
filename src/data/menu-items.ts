@@ -402,7 +402,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description: "Homemade strawberry milk, butterfly pea powder milk, and homemade whipped heavy cream mix",
     price: 6.90,
     imageUrl: "images/menu-items/spring-latte.webp",
-    categories: [Category.Drink, Category.Cold, Category.Coffee, Category.Seasonal, Category.Specials],
+    categories: [Category.Drink, Category.Cold, Category.Coffee, Category.Seasonal],
     size: Size["20oz"],
   },
   {
@@ -410,7 +410,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description: "Cubed watermelon, Sprite, and blood orange syrup",
     price: 6.90,
     imageUrl: "images/menu-items/summer-sparkling.webp",
-    categories: [Category.Drink, Category.Seasonal, Category.Cold, Category.Specials],
+    categories: [Category.Drink, Category.Seasonal, Category.Cold],
     size: Size["20oz"],
   },
   {
@@ -418,7 +418,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description: "2 shots of expresso, steamed milk, cinnamon powder, pumpkin powder, and topped with whipped cream and more cinnamon powder",
     price: 6.50,
     imageUrl: "images/menu-items/fall-pumpkin-spice-latte.webp",
-    categories: [Category.Drink, Category.Hot, Category.Coffee, Category.Seasonal, Category.Specials],
+    categories: [Category.Drink, Category.Hot, Category.Coffee, Category.Seasonal],
     size: Size["16oz"],
   },
   {
@@ -426,7 +426,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description: "2 shots of expresso, milk, pumpkin powder, cinnamon powder, and topped with whipped cream and more cinnamon powder",
     price: 7.00,
     imageUrl: "images/menu-items/iced-fall-pumpkin-spice-latte.webp",
-    categories: [Category.Drink, Category.Cold, Category.Coffee, Category.Seasonal, Category.Specials],
+    categories: [Category.Drink, Category.Cold, Category.Coffee, Category.Seasonal],
     size: Size["20oz"],
   },
   {
@@ -434,7 +434,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description: "Homemade chocolate syrup, steamed milk, topped with one marshmallow and chocolate powder",
     price: 5.00,
     imageUrl: "images/menu-items/winter-hot-chocolate.webp",
-    categories: [Category.Drink, Category.Hot, Category.NonCoffee, Category.Seasonal, Category.Specials],
+    categories: [Category.Drink, Category.Hot, Category.NonCoffee, Category.Seasonal],
     size: Size["20oz"],
   },
   //#endregion
@@ -461,88 +461,5 @@ export const MENU_ITEMS: IMenuItem[] = [
     categories: [Category.Drink, Category.Hot, Category.Tea],
     size: Size["16oz"],
   },
-  //#endregion
-
-  //#region anime drinks
-//   {
-//     name: "Chocolate Form: Flowing Mint Latte",
-//     description: "Inspired by Tanjiro from Demon Slayer. Chocolate syrup, mint syrup, milk, and whipped cream with sprinkles",
-//     price: 7.00,
-//     imageUrl: "images/menu-items/chocolate-form-flowing-mint-latte.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Sweet Demon Latte",
-//     description: "Inspired by Nezuko from Demon Slayer. Chocolate syrup, strawberry syrup, milk, and whipped cream with sprinkles",
-//     price: 7.00,
-//     imageUrl: "images/menu-items/sweet-demon-latte.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Love Blossom Matcha Latte",
-//     description: "Inspired by Mitsuri from Demon Slayer. Strawberry syrup, milk, matcha powder, and a whole strawberry",
-//     price: 7.00,
-//     imageUrl: "images/menu-items/love-blossom-matcha-latte.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Mango Flameade",
-//     description: "Inspired by Rengoku from Demon Slayer. Mango syrup, blood orange syrup, Sprite, and a slice of orange",
-//     price: 6.00,
-//     imageUrl: "images/menu-items/mango-flameade.webp",
-//     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Harmonic Grapeade",
-//     description: "Inspired by Tengen from Demon Slayer. Grape syrup, Sprite, and a slice of kiwi",
-//     price: 5.50,
-//     imageUrl: "images/menu-items/harmonic-grapeade.webp",
-//     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Lemonade Type: Explosive Razz",
-//     description: "Inspired by Akaza from Demon Slayer. Raspberry syrup, lemon syrup, blue curacao syrup, Sprite, and a slice of lemon",
-//     price: 6.00,
-//     imageUrl: "images/menu-items/lemonade-type-explosive-razz.webp",
-//     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Moe Moe Sweet Mint Beam",
-//     description: "Inspired By Momo from Dandadan. Strawberry syrup, milk, mint syrup, whipped heavy cream, and a whole strawberry",
-//     price: 6.50,
-//     imageUrl: "images/menu-items/moe-moe-sweet-mint-beam.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Cursed Turbo Razz Soda",
-//     description: "Inspired By Okarun from Dandadan. Raspberry syrup, blue curacao syrup, blood orange syrup, Sprite, whipped cream, with a raspberry topping",
-//     price: 7.00,
-//     imageUrl: "images/menu-items/cursed-turbo-razz-soda.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Strawberry Butterfly Spiral",
-//     description: "Inspired By Aira from Dandadan. Strawberry syrup, Sprite, butterfly pea powder, water, and a whole strawberry",
-//     price: 6.00,
-//     imageUrl: "images/menu-items/strawberry-butterfly-spiral.webp",
-//     categories: [Category.Drink, Category.Cold, Category.NonCoffee, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
-//   {
-//     name: "Arisen Lychee Lemonade",
-//     description: "Inspired By Jin Woo from Solo Leveling. Lychee syrup, lemon syrup, blue curacao syrup, blood orange syrup, Sprite, and a slice of lemon",
-//     price: 6.00,
-//     imageUrl: "images/menu-items/arisen-lychee-lemonade.webp",
-//     categories: [Category.Drink, Category.Cold, Category.Ade, Category.Anime, Category.Specials],
-//     size: Size["20oz"],
-//   },
   //#endregion
 ];
